@@ -1,0 +1,20 @@
+{
+  "name": "teconsultas",
+  "version": "1.0.0",
+  "description": "Aplicación Web para consultas en línea con distintos especialistas del área de la salud.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanGonzalezR/TEConsultas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IvanGonzalezR/TEConsultas/issues"
+  },
+  "homepage": "https://github.com/IvanGonzalezR/TEConsultas#readme"
+}

@@ -50,7 +50,14 @@ span {
 a {
   font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
-  color: var(--Text);
+  color: var(--White);
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgb(0, 0, 10, 0.475);
 }
 
 .btnWhite {

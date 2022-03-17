@@ -41,3 +41,12 @@
 .black_text {
   color: #000000;
 }
+
+.flex-start {
+  align-items: flex-start;
+}
+
+.imgRedonda {
+  border-radius: 180px;
+  background-color: black;
+}

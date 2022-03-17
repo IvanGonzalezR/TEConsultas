@@ -22,11 +22,12 @@
 
         <div class="menu flex">
             <div class="menu-items flex">
-                <img src="./recursos/img/logo.png" alt="logo">
+                <a href="index.html"><img src="./recursos/img/logo.png" alt="logo"></a>
+                
                 <nav>
-                    <a href="">Inicio</a>
-                    <a href="">Crear cuenta</a>
-                    <a href="">Iniciar sesion</a>
+                    <a href="index.html">Inicio</a>
+                    <a href="#">Crear cuenta</a>
+                    <a href="#">Iniciar sesion</a>
                 </nav>
             </div>
         </div>
@@ -37,11 +38,11 @@
                     <h1>Crea tu cuenta</h1>
                     <p>Selecciona que tipo de usuario eres</p>
                     <div class="btnsTipoUser flex centerX centerY">
-                        <div class="btnUser flex">
-                            <p>paciente</p>
+                        <div id="paciente" class="btnUser flex">
+                            <a href="">paciente</a>
                         </div>
-                        <div class="btnUser flex">
-                            <p>doctor</p>
+                        <div id="doctor" class="btnUser flex">
+                            <a href="">doctor</a>
                         </div>
                     </div>
                     <div class="inputs grid">
@@ -51,7 +52,7 @@
                         <input type="password" placeholder="CONFIRMAR CONTRASEÑA" name="ConContrasena" id="ccontrasena">
                     </div>
                     <div class="btnCreateAcc flex">
-                        <p>crear cuenta</p>
+                        <a href="index.html">crear cuenta</a>
                     </div>
                 </div>
                 
@@ -64,5 +65,6 @@
 
     </div>
     
+    <script src="./js/registros.js"></script>
 </body>
 </html>

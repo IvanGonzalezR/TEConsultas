@@ -5,9 +5,9 @@
 /* NAV */
 .menu{
     width: 100%;
-    height: 3.125rem;/*100px*/
+    height: 50px;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
 }
 
 .menu-items{
@@ -18,12 +18,20 @@
 }
 
 .menu img{
-    width: 24px;
-    height: 24px;
+    width: 180px;
 }
 
 nav a:not(a:last-child){
     margin-right: 1rem;
+}
+
+nav a{
+    color: white;
+    font-size: 18px;
+}
+
+nav a:hover{
+    color: #030419;
 }
 
 /* MAIN */
@@ -31,12 +39,12 @@ nav a:not(a:last-child){
     width: 100%;
     height: 100vh;
     position: absolute;
-    z-index: 3;
+    z-index: 2;
 }
 
 .main-items{
     width: 30.625rem;
-    height: 31.25rem;
+    /*height: 31.25rem;*/
     text-align: center;
     justify-items: center;
     position: absolute;
@@ -50,6 +58,11 @@ nav a:not(a:last-child){
     color: white;
 }
 
+.main-items > p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .btnUser{
     text-transform: uppercase;
     justify-content: center;
@@ -59,6 +72,11 @@ nav a:not(a:last-child){
     width: 130px;
     height: 45px;
     margin-right: 10px;
+}
+
+.btnUser a{
+    color: white;
+    font-size: 18px;
 }
 
 .btnUser:hover{
@@ -96,13 +114,30 @@ input::placeholder{
     background-color: #030419;
 }
 
+.btnCreateAcc a{
+    color: white;
+    font-size: 18px;
+}
+
 .btnCreateAcc:hover{
     cursor: pointer;
+    background-color: #495057;
 }
 
 /* BACKGROUND */
 .background{
+    height: 100vh;
     width: 100%;
-    position: absolute;
+    position: fixed;/*VER*/
     z-index: 1;
+}
+
+.background:before{
+    content: '';
+    position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(3,4,25,.5);/*#030419*/
 }

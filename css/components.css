@@ -17,7 +17,6 @@ h4,
 h5,
 h6 {
   font-family: "Cardo", serif;
-  color: var(--Text);
   font-weight: bold;
 }
 
@@ -46,27 +45,28 @@ span {
 a {
   font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
-  color: var(--Text);
 }
 
 .btnWhite {
-  width: 243px;
-  height: 64px;
+  width: 446px;
+  height: 48px;
   left: 459px;
   top: 697px;
-
+  color: var(--Black-blue);
   background: var(--White);
-  border: 1px solid var(--Text);
+  border: 1px solid var(--White);
+  padding-bottom: 1rem;
 }
 
 .btnBlack {
-  width: 243px;
-  height: 64px;
+  width: 446px;
+  height: 48px;
   left: 738px;
   top: 697px;
-
+  color: var(--White);
   background: var(--Black-blue);
-  border: 1px solid var(--White);
+  border: 1px solid var(--Black-blue);
+  margin-bottom: 1rem;
 }
 
 .container__2col {

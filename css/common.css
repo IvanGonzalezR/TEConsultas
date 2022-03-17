@@ -29,3 +29,15 @@
 .grid {
   display: grid;
 }
+
+.white {
+  color: #ffffff;
+}
+
+.black {
+  color: #030419;
+}
+
+.black_text {
+  color: #000000;
+}

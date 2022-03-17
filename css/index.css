@@ -1,3 +1,11 @@
+:root {
+  --Primary-blue: #1a26ff;
+  --Black-blue: #030419;
+  --Gray: #495057;
+  --White: #ffffff;
+  --Text: #000000;
+}
+
 header {
   width: 100%;
   height: 8vh;
@@ -48,96 +56,37 @@ main {
   top: 40%;
 }
 
-/*----------------------- parte del juanma ---------------------------------*/
-h4{
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  position: absolute;
-  text-align:left;
-  color: #fff;
+/* Inicio de sesion*/
+
+.background {
+  background-size: cover;
+  height: 100vh;
+  background-image: url(/recursos/img/background-inicio.png);
 }
 
-nav{
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  position: absolute;
-  text-align:right; 
+.container {
+  height: 70vh;
 }
 
-nav a{
-  color: #fff;
-  text-decoration: none;
+.container__line {
+  margin: 0 8.5rem;
 }
 
-video{
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  z-index: -1;
+.container__left h4,
+.container__rigth h4 {
+  margin-bottom: 2rem;
 }
 
-.titulo{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 15%;
+.container__left span {
   text-align: center;
+  margin-top: 1.5rem;
 }
 
-.boton {
-  width: 580px;
-  height: 400px;
-  z-index: 1;
-  position: absolute;
-  top: 65%;
-  text-align: center;
-}
-
-.boton :first-child{
-  background-color: #fff;
-  text-decoration: none;
-  color: #060A25;
-}
-
-h1{
-  font-size: 60px;
-  font-weight: 900;
-  color: #fff;
-  margin-bottom: 30px;
-}
-
-h3{
-  font-size: 20px;
-  font-weight: 900;
-  color: #fff;
-  margin-bottom: 30px; 
-}
-
-.overlay{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: rgb(0, 0, 10, 0.475);
-}
-
-.header-bottom{
-  width: 100%;
-  height: 25%;
-  background-color:#060A25;
-  position:absolute;
-  top: 90%;
-  z-index: 1;
-}
-
-.header-bottom :first-child{
-  color: #fff;
-  text-align: center;
-  position: relative;
-  top: 40%;
+.form input {
+  width: 446px;
+  height: 48px;
+  left: 738px;
+  top: 697px;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
 }

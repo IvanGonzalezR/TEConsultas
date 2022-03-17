@@ -1,3 +1,11 @@
+:root {
+  --Primary-blue: #1a26ff;
+  --Black-blue: #030419;
+  --Gray: #495057;
+  --White: #ffffff;
+  --Text: #000000;
+}
+
 header {
   width: 100%;
   height: 8vh;
@@ -119,6 +127,32 @@ video {
   text-align: center;
 }
 
+/* Inicio de sesion*/
+.background-login {
+  background-image: url("/recursos/img/background-inicio.png");
+  background-size: cover;
+  height: 100vh;
+}
+
+.container-login {
+  height: 80vh;
+  padding-top: 8rem;
+}
+
+.container__line {
+  margin: 0 8.5rem;
+}
+
+.container__left h4,
+.container__rigth h4 {
+  margin-bottom: 2rem;
+}
+
+.container__left span {
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
 .botones {
   height: fit-content;
   width: 100%;
@@ -149,4 +183,64 @@ h3 {
   top: 90%;
   z-index: 1;
   transform: translateY(-90%);
+}
+
+.form input {
+  width: 446px;
+  height: 48px;
+  left: 738px;
+  top: 697px;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+/* Interfaz patient*/
+.background-patient {
+  background-image: url("/recursos/img/background-interfaz-paciente.png");
+  background-size: cover;
+  height: 100vh;
+}
+
+.container-patient {
+  height: 80vh;
+}
+
+.container-patient__left {
+  background-color: #7c7e80;
+  margin: 0 2rem;
+  width: 17%;
+}
+
+.container-patient__left__text {
+  padding-bottom: 3rem;
+}
+
+.container-patient__left__text img {
+  width: 70%;
+  margin-bottom: 0.7rem;
+}
+
+.container-patient__left__text span {
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.container-patient__left__iconos {
+  background-color: #030419;
+  padding: 1rem 0.5rem;
+}
+
+.container-patient__left__iconos img {
+  padding-top: 1rem;
+  width: 35%;
+}
+
+.container-patient__rigth {
+  background-color: #ffffff;
+  width: 77%;
+  padding-left: 4rem;
+}
+
+.container-patient__rigth h2 {
+  padding-bottom: 1rem;
 }

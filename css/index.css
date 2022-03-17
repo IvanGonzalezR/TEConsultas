@@ -45,10 +45,16 @@ header {
   top: 40%;
 }
 
-.video {
-  width: 100%;
-  height: 100%;
-  position: absolute;
+.container {
+  max-width: 1000px;
+  /* flex: 1; */
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+
 }
 
 /*----------------------- parte del juanma ---------------------------------*/
@@ -56,65 +62,68 @@ h4 {
   color: #fff;
 }
 
-/* nav {
-  top: 0px;
-  right: 0px;
+.main {
+  width: 100vw;
+  height: 60vh;
   margin: 0px;
-  padding: 0px;
-  /* position: absolute; */
-/* text-align: right;
-} */
+}
 
-/* nav a {
-  color: #fff;
-  text-decoration: none;
-} */
-
-.navigation {
-  height: 3.125rem;
-  width: fit-content;
-  color: #fff;
-  top: 5rem;
+.overlay {
+  width: 100vw;
+  height: 50vh;
+  min-height: 60rem;
+  margin: 0px;
+  position: absolute;
+  background: rgb(0, 0, 10, 0.475);
 }
 
 .navigation_div {
   display: flex;
   flex-direction: row;
   height: 3rem;
-  /* width: 100%; */
-  margin: 0px;
+  margin-left: 5rem;
+  margin-right: 5rem;
   color: #fff;
   justify-content: space-between;
+  align-items: center;
+}
+
+.navigation {
+  height: 3.125rem;
+  width: 20rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 video {
   position: absolute;
   display: flex;
-  height: 100%;
-  width: 100%;
-  /* top: 50%; */
+
+  height: 130vh;
+  width: 100vw;
+  margin: 0px;
   left: 50%;
-  transform: translateX(-50%) translateY(-10%);
+  transform: translateX(-50%) translateY(-20%);
   z-index: -1;
 }
 
 .titulo {
+  width: 100%;
+  /* height: 10vh; */
+  line-height: 1;
   position: absolute;
-  top: 15%;
+  margin-top: 17vh;
   text-align: center;
 }
 
-.boton {
-  z-index: 1;
-  position: absolute;
-  top: 65%;
+.botones {
+  height: fit-content;
+  width: 100%;
+  margin-top: 5rem;
   text-align: center;
-}
-
-.boton :first-child {
-  background-color: #fff;
-  text-decoration: none;
-  color: #060A25;
 }
 
 h1 {
@@ -133,9 +142,11 @@ h3 {
 
 .header-bottom {
   width: 100%;
-  height: 25%;
+  height: 25vh;
+  margin: 0px;
   background-color: #060A25;
   position: absolute;
   top: 90%;
   z-index: 1;
+  transform: translateY(-90%);
 }

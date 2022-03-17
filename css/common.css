@@ -1,0 +1,31 @@
+/*
+    En este archivo estan las propiedades que se repiten una y otra vez normalmente en los proyectos web.
+*/
+
+.flex {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.centerX {
+  justify-content: center;
+}
+
+.centerY {
+  align-items: center;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.grid {
+  display: grid;
+}

@@ -81,6 +81,13 @@ header {
   background: rgb(0, 0, 10, 0.475);
 }
 
+.overlay_image:hover {
+  margin: 0px;
+  position: relative;
+  background: rgb(0, 0, 10, 0.475);
+  border-radius: 1.4rem;
+}
+
 .navigation_div {
   display: flex;
   flex-direction: row;
@@ -131,7 +138,8 @@ video {
 }
 
 .container-login {
-  height: 80vh;
+  height: 100vh;
+  width: 100vw;
   padding-top: 8rem;
 }
 
@@ -211,36 +219,85 @@ video {
   line-height: 1.5rem;
 }
 
-#wrapper_section3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
-  gap: 1rem;
+#section3 {
+  padding: 5rem;
 }
 
-.section3_one {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
+#wrapper_section3 {
+  height: 100%;
+  width: 100%;
+  max-height: 20rem;
+  display: grid;
+  grid-template-columns: 25rem 25rem;
+  grid-template-rows: 18rem;
+  justify-items: center;
+  justify-content: center;
+  grid-gap: 3rem;
+}
+
+.section3_one h2 {
+  margin-bottom: 1rem;
+}
+
+.section3_one p {
+  line-height: 1.5rem;
 }
 
 .section3_two {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
+  height: 100%;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  justify-items: center;
+  justify-content: center;
+  /* align-items: center; */
+  grid-gap: 1rem;
 }
 
-.section3_three {
-  background-color: aqua;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 1;
+.section3_two img {
+  position: relative;
+  height: 100%;
+  border-radius: 1.4rem;
+  z-index: -1;
 }
 
+.section3_three {}
 
+#section4 {
+  position: relative;
+  padding: 5rem;
+}
+
+#wrapper_section4 {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: 16rem;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+  grid-gap: 3rem;
+}
+
+#img1_section4 {}
+
+#img1_section4 {
+  display: flex;
+  flex-direction: column;
+}
+
+#img2_section4 {
+  display: flex;
+  flex-direction: column;
+}
+
+#wrapper_section4 {
+  height: 100%;
+  width: 100%;
+  max-height: 20rem;
+  display: grid;
+}
 
 .form input {
   width: 446px;

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/interfaz-paciente.css" />
     <!-- Cargamos nuestras fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -59,6 +60,23 @@
           <div class="container-patient__rigth flex column centerX">
             <h2 class="black-text">Configuracion de la cuenta</h2>
             <span>*Campo obligatorio</span>
+            <form class="form-paciente flex row">
+              <div class="labels flex column centerX">
+                <span>Nombre*</span>
+                <span>Apellido*</span>
+                <span>Contraseña*</span>
+                <span>Numero de telefono*</span>
+                <span>Cambiar nombre de usuario</span>
+              </div>
+
+              <div class="inputs flex column centerX">
+                <input type="text" name="nombre" id="nombre" />
+                <input type="text" name="apellido" id="apellido" />
+                <input type="password" name="password" id="password" />
+                <input type="phone" name="phone" id="phone" />
+                <input type="text" name="usuario" id="usuario" />
+              </div>
+            </form>
           </div>
         </div>
       </main>

@@ -23,15 +23,19 @@ h6 {
 h1 {
   font-size: 3.75rem;
 }
+
 h2 {
   font-size: 2.5rem;
 }
+
 h3 {
   font-size: 1.87rem;
 }
+
 h4 {
   font-size: 1.56rem;
 }
+
 h5 {
   font-size: 1.25rem;
 }
@@ -44,29 +48,58 @@ span {
 
 a {
   font-family: "Poppins", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  color: var(--White);
+}
+
+.menu {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  z-index: 3;
+}
+
+.menu-items {
+  width: 100%;
+  margin: 0px 100px 0 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu img {
+  width: 180px;
+}
+
+nav a:not(a:last-child) {
+  margin-right: 1rem;
+}
+
+nav a {
+  color: white;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #030419;
 }
 
 .btnWhite {
-  width: 446px;
-  height: 48px;
-  left: 459px;
-  top: 697px;
-  color: var(--Black-blue);
+  font-size: 1.1em;
+  padding: 0.4em 2em;
+  /* left: 738px;
+  top: 697px; */
   background: var(--White);
-  border: 1px solid var(--White);
-  padding-bottom: 1rem;
+  color: #060A25;
+  /* border: 1px solid var(--Black-blue); */
 }
 
 .btnBlack {
-  width: 446px;
-  height: 48px;
-  left: 738px;
-  top: 697px;
-  color: var(--White);
+  font-size: 1.1em;
+  padding: 0.4em 2em;
+  /* left: 738px;
+  top: 697px; */
   background: var(--Black-blue);
-  border: 1px solid var(--Black-blue);
-  margin-bottom: 1rem;
+  /* border: 1px solid var(--White); */
 }
 
 .container__2col {

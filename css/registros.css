@@ -1,0 +1,114 @@
+.container {
+    position: relative;
+}
+
+/* MAIN */
+.main-container {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 2;
+}
+
+.main-items {
+    width: 30.625rem;
+    /*height: 31.25rem;*/
+    text-align: center;
+    justify-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15.625rem;
+    margin-left: -15.313rem;
+}
+
+.main-items h1,
+p {
+    color: white;
+}
+
+.main-items>p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btnUser {
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    background-color: #030419;
+    letter-spacing: .1rem;
+    width: 130px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+.btnUser a {
+    color: white;
+    font-size: 18px;
+}
+
+.btnUser:hover {
+    background-color: #495057;
+    cursor: pointer;
+}
+
+.inputs {
+    justify-items: center;
+}
+
+.inputs input {
+    margin-bottom: 15px;
+    width: 300px;
+    height: 40px;
+}
+
+.inputs input:first-child {
+    margin-top: 50px;
+}
+
+input::placeholder {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    padding-left: 20px;
+}
+
+.btnCreateAcc {
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 45px;
+    background-color: #030419;
+}
+
+.btnCreateAcc a {
+    color: white;
+    font-size: 18px;
+}
+
+.btnCreateAcc:hover {
+    cursor: pointer;
+    background-color: #495057;
+}
+
+/* BACKGROUND */
+.background {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    /*VER*/
+    z-index: 1;
+}
+
+.background:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(3, 4, 25, .5);
+    /*#030419*/
+}

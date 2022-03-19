@@ -84,7 +84,7 @@ nav a:hover {
 }
 
 .btnWhite {
-  font-size: 1.1em;
+  font-size: 1.2em;
   padding: 0.4em 2em;
   /* left: 738px;
   top: 697px; */
@@ -93,13 +93,22 @@ nav a:hover {
   /* border: 1px solid var(--Black-blue); */
 }
 
+.btnWhite:hover{
+  background-color: #495057;
+  color: #fff;
+}
+
 .btnBlack {
-  font-size: 1.1em;
+  font-size: 1.2em;
   padding: 0.4em 2em;
   /* left: 738px;
   top: 697px; */
   background: var(--Black-blue);
   /* border: 1px solid var(--White); */
+}
+
+.btnBlack:hover{
+  background-color: #495057;
 }
 
 .container__2col {

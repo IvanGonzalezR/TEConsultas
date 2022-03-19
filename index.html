@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <script src="/js/index-hover.js"></script>
   </head>
   <body>
     <section class="section1">
@@ -78,16 +79,16 @@
       </div>
       <div class="section3_two">
         <div class="overlay_image">
-          <img src="/recursos/img/image1.jpg">
+          <img src="/recursos/img/cuadro1.png" id="img1" onmouseover="changeImage()">
         </div>
         <div class="overlay_image">
-          <img src="/recursos/img/image2.jpg">
+          <img src="/recursos/img/cuadro2.png" id="img2" onclick="changeImage2()">
         </div>
         <div class="overlay_image">
-          <img src="/recursos/img/image3.jpg">
+          <img src="/recursos/img/cuadro3.png" id="img3" onclick="changeImage3()">
         </div>
         <div class="overlay_image">
-          <img src="/recursos/img/image4.jpg">
+          <img src="/recursos/img/cuadro4.png" id="img4" onclick="changeImage4()">
         </div>
       </div>
     </div>
@@ -96,16 +97,35 @@
   <section id="section4">
     <div id="wrapper_section4">
       <div id="img1_section4">
-        <h2>titulo cualquiera</h2>
-        <p>Texto cualquiera</p>
+        <h2>Para Pacientes</h2><br><br>
+        <p>Busca un doctor, agenda una cita<br>
+            y resuelve tus dudas sobre <br>
+            cualquier problema médico.</p><br><br><br>
         <a href="" class="btnWhite">REGISTRATE AHORA</a>
       </div>
       <div id="img2_section4">
-        <h2>titulo cualquiera</h2>
-        <p>Texto cualquiera</p>
+        <h2>Para Doctores</h2><br><br>
+        <p>Ahorra tiempo, organizate mejor y <br>
+           consigue más y mejores pacientes<br>
+           para tu consultorio médico<br>
+          privara.</p><br><br>
         <a href="" class="btnWhite">REGISTRATE AHORA</a>
       </div>
     </div>
   </section>
   </body>
+  <footer class="footer">
+    <div class="foo">
+      <div class="foo-left">
+        <h4>TEConsultas</h4>
+        <h4>Av Morelos 642 Zona Centro, Torreón, Coah.</h4>
+        <h4>[+52] 8712334511</h4>
+      </div>
+      <div class="foo-right">
+        <h4>Acerca de</h4>
+        <h4>Politicas de privacidad</h4>
+        <h4>teconsultas.medicalsoftec@gmail.com</h4>
+      </div>
+    </div>
+  </footer>
 </html>

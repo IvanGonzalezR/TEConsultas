@@ -182,15 +182,20 @@ video {
 }
 
 #wrapper_section2 {
-  height: 70vh;
+  height: 50vh;
   width: 100vw;
   display: grid;
-  padding: 5rem 15rem;
+  padding: 5rem 7rem;
   grid-template-columns: repeat(3, 1);
   grid-template-rows: 8rem;
-  gap: 1rem;
+  /* gap: 1rem; */
   grid-auto-rows: minmax(7rem, auto);
   background-color: #f3f3f3;
+}
+
+#section2 {
+  /* height: 70vh; */
+  width: 100%;
 }
 
 .section2_one {
@@ -213,7 +218,10 @@ video {
 }
 
 #section3 {
-  padding: 5rem;
+  height: 75vh;
+  width: 100%;
+  align-items: center;
+  padding: 8rem 5rem 5rem 5rem;
 }
 
 #wrapper_section3 {
@@ -222,7 +230,7 @@ video {
   max-height: 20rem;
   display: grid;
   grid-template-columns: 25rem 25rem;
-  grid-template-rows: 18rem;
+  grid-template-rows: 100%;
   justify-items: center;
   justify-content: center;
   grid-gap: 3rem;
@@ -259,21 +267,21 @@ video {
 
 #section4 {
   position: relative;
-  padding: 5rem;
+  margin-bottom: 20vh;
+  padding-bottom: 12vh;
 }
 
 #wrapper_section4 {
   display: grid;
+  height: 100%;
   grid-template-columns: 40% 40%;
   grid-template-rows: 16rem;
   align-content: center;
   justify-items: center;
   justify-content: center;
   text-align: center;
-  grid-gap: 3rem;
+  grid-gap: 2.5rem;
 }
-
-#img1_section4 {}
 
 #img1_section4 {
   display: flex;
@@ -366,33 +374,47 @@ video {
   padding-bottom: 1rem;
 }
 
-.footer{
+.footer {
   position: relative;
+  height: 23vh;
   width: 100%;
   background-color: #030419;
-  
+
 }
 
-.foo{
+.foo {
+  height: 100%;
   display: grid;
   grid-template-columns: 50% 40%;
-  padding-top: 2rem;
+  align-items: center;
+  grid-gap: 2rem;
 }
 
-.foo h4{
+.foo h4 {
   padding-bottom: 0.5rem;
 }
 
-.foo h4:hover{
+.foo h4:hover {
   color: #d2d2d2;
   cursor: default;
 }
 
-.foo-left{
+.foo-left {
   color: #fff;
+  height: 50%;
+  line-height: 1.5rem;
 }
 
-.foo-right{
-  padding-left: 5rem;
+#img1_section4>p {
+  line-height: 1.5rem;
+}
+
+.foo-right {
   color: #fff;
+  height: 50%;
+  line-height: 1.5rem;
+}
+
+#img2_section4>p {
+  line-height: 1.5rem;
 }

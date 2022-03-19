@@ -93,7 +93,7 @@ nav a:hover {
   /* border: 1px solid var(--Black-blue); */
 }
 
-.btnWhite:hover{
+.btnWhite:hover {
   background-color: #495057;
   color: #fff;
 }
@@ -107,7 +107,7 @@ nav a:hover {
   /* border: 1px solid var(--White); */
 }
 
-.btnBlack:hover{
+.btnBlack:hover {
   background-color: #495057;
 }
 
@@ -129,9 +129,9 @@ nav a:hover {
 footer {
   width: 100%;
   height: 25vh;
-  margin: 3rem 0;
+  /* margin: 3rem 0; */
   align-items: center;
-  padding: 0 4.5rem;
+  padding: 0 13vw;
 }
 
 .footer__info {

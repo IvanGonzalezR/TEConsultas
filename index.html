@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <script src="/js/index-hover.js"></script>
+    <script src="js/index-hover.js"></script>
   </head>
   <body>
     <section class="section1">
@@ -78,18 +78,15 @@
         <p>somos un grupo de desarrolladores web laguneros con un amplio conocimiento en la industria médica</p>
       </div>
       <div class="section3_two">
-        <div class="overlay_image">
-          <img src="/recursos/img/cuadro1.png" id="img1" onmouseover="changeImage()">
+        <div >
+        <img src="/recursos/img/cuadro1.png" id="img1" onmouseover="changeImage1()" onmouseout="changeImageOut1()">
         </div>
-        <div class="overlay_image">
-          <img src="/recursos/img/cuadro2.png" id="img2" onclick="changeImage2()">
-        </div>
-        <div class="overlay_image">
-          <img src="/recursos/img/cuadro3.png" id="img3" onclick="changeImage3()">
-        </div>
-        <div class="overlay_image">
-          <img src="/recursos/img/cuadro4.png" id="img4" onclick="changeImage4()">
-        </div>
+         
+        <img src="/recursos/img/cuadro2.png" id="img2" onmouseover="changeImage2()" onmouseout="changeImageOut2()">
+      
+        <img src="/recursos/img/cuadro3.png" id="img3" onmouseover="changeImage3()" onmouseout="changeImageOut3()">
+      
+        <img src="/recursos/img/cuadro4.png" id="img4" onmouseover="changeImage4()" onmouseout="changeImageOut4()">
       </div>
     </div>
   </section>

@@ -9,8 +9,6 @@
 header {
   width: 100%;
   height: 8vh;
-  padding: 0 7rem;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -260,10 +258,12 @@ video {
   position: relative;
   height: 100%;
   border-radius: 1.4rem;
-  z-index: -1;
+  z-index: 1;
 }
 
-.section3_three {}
+.section3_two #img1 {
+  background: url("/recursos/img/cuadro1_hover.png")
+}
 
 #section4 {
   position: relative;
@@ -338,6 +338,7 @@ video {
   background-color: #7c7e80;
   margin: 0 2rem;
   width: 17%;
+  border-radius: 1.5rem;
 }
 
 .container-patient__left__text {
@@ -347,16 +348,24 @@ video {
 .container-patient__left__text img {
   width: 70%;
   margin-bottom: 0.7rem;
+  border-radius: 50%;
 }
 
 .container-patient__left__text span {
   padding-top: 0.5rem;
   font-size: 0.8rem;
+  color: white;
+}
+
+.container-patient__left__title {
+  color: white;
+  text-align: center;
 }
 
 .container-patient__left__iconos {
   background-color: #030419;
   padding: 1rem 0.5rem;
+  border-radius: 1.5rem;
 }
 
 .container-patient__left__iconos img {
@@ -368,6 +377,7 @@ video {
   background-color: #ffffff;
   width: 77%;
   padding-left: 4rem;
+  border-radius: 1.5rem;
 }
 
 .container-patient__rigth h2 {
@@ -379,7 +389,6 @@ video {
   height: 23vh;
   width: 100%;
   background-color: #030419;
-
 }
 
 .foo {

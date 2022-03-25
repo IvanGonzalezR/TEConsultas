@@ -20,12 +20,24 @@
 
 .items{
     width: 90%;
-    height: 50%;
+    /*height: 50%;*/
+    height: auto;
     background-color: #030419;
     border-radius: 1rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.fa-solid{
+    width: 60px;
+    height: 60px;
+    color: white;
+}
+
+.calendario{
+    width: 60px;
+    height: 60px;
 }
 
 .container-item{

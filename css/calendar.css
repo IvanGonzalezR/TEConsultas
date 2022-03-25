@@ -1,0 +1,54 @@
+#calendar {
+  font-family: "Poppins", sans-serif;
+  font-size:12px;
+  width: 100%;
+  height: 90%;
+}
+#calendar caption {
+  height: 50px;
+  
+  text-align:center;
+  padding:5px 10px;
+  color:#030419;
+  font-weight:bold;
+  font-size:medium;
+}
+
+#calendar caption div:nth-child(1) {
+  float:left; 
+  font-size: 30px;
+}
+
+#calendar caption div:nth-child(2) {float:right;}
+
+#calendar caption div:nth-child(2) a {
+  cursor:pointer; 
+  color: #030419; 
+  font-size: 50px; 
+  margin-left: 20px;}
+
+#calendar th {
+  width: 102px;
+  height: 50px;
+  color:#90BEDE;
+  font-size: 40px;
+}
+#calendar td {
+  height: 30px;
+  text-align:center;
+  padding:2px 5px;
+  cursor: pointer;
+}
+#calendar td a{
+  font-size: 30px;
+  color: #030419;
+}
+#calendar td:hover {
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 20%;
+}
+/*
+#calendar .hoy {
+  background-color:red;
+}*/

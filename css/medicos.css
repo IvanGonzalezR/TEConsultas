@@ -48,7 +48,28 @@
     border-radius: 1rem;
     flex-direction: column;
     align-items: center;
+
+    overflow-x: hidden;
+    overflow-y: auto;
 }
+
+/*---------------------SCROLLBAR CONSULTAS----------------------*/
+.consultas::-webkit-scrollbar {
+    width: 12px;               
+}
+  
+.consultas::-webkit-scrollbar-track {
+    background: #030419;        
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem ;
+}
+  
+.consultas::-webkit-scrollbar-thumb {
+    background-color: #90BEDE;    
+    border-radius: 20px;       
+    border: 3px solid #030419;  
+}
+/*--------------------------------------------------------------*/
 
 .consultas > p{
     color: white;
@@ -61,9 +82,10 @@
 .card{
     width: 60%;
     height: 250px;
-    background-color: rgb(138, 202, 231);
+    background-color: #90BEDE;
     padding: 20px;
     border-radius: 1rem;
+    margin-bottom: 20px;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;

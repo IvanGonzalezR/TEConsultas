@@ -8,7 +8,7 @@ function mostrarCalendario(year,month)
 	var dia=0;
 	var resultado="<tr>";
 	var diaActual=0;
-	console.log(ultimoDiaMes);
+	//console.log(ultimoDiaMes);
  
 	var last_cell=primerDiaSemana+ultimoDiaMes;
  

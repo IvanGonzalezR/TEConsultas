@@ -54,3 +54,7 @@
 .tamIconos{
   width: 2.5rem;/*40px*/
 }
+
+.ocultar{
+  display: none;
+}

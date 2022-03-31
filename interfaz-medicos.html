@@ -48,7 +48,7 @@
                                 style="width:60px;height:60px;">
                             </lord-icon>
                         </a>
-                        <a href="">
+                        <a href="" id="account">
                             <lord-icon
                                 src="https://cdn.lordicon.com/dklbhvrt.json"
                                 trigger="hover"
@@ -76,7 +76,7 @@
                 <div class="container-item flex">
                     <!--En el caso de seleccionar el calendario-->
                     
-                    <div class="calendar">
+                    <!-- <div class="calendar">
                         
                         <table id="calendar">
                             <div class="title-month"><caption></caption></div>
@@ -90,7 +90,7 @@
                             </tbody>
                         </table>
                     </div>
-
+                    
                     <div class="consultas flex scroll">
                         <p>CONSULTAS</p>
                         <div class="card flex">
@@ -122,6 +122,28 @@
                                 <a href="">INICIAR</a>
                             </div>
                         </div>
+                    </div> -->
+                    <!------------------------------------------->
+
+                    <!--En el caso de seleccionar el calendario-->
+                    <div class="info-account flex">
+                        <div class="info-account-items">
+                            <p>Informacion de la cuenta</p>
+                            <div class="inputs flex">
+                                <input type="text" placeholder="NOMBRE COMPLETO" name="nombre" id="nombre">
+                                <input type="text" placeholder="CEDULA" name="cedula" id="cedula">
+                                <p>Fecha de nacimiento: <input type="date" name="nacimiento" id="nacimiento"></p>
+                                <p>Sexo: M <input type="radio" name="sexo" id="sexo"> F <input type="radio" name="sexo" id="sexo"></p>
+                                <input type="text" placeholder="DIRECCION CONSULTORIO" name="consultorio" id="consultorio">
+                                <input type="text" placeholder="ESPECIALIDAD" name="especialidad" id="especialidad">
+                                <textarea placeholder="HABLA SOBRE TI..." name="descripcion" id="descripcion" cols="30" rows="10"></textarea>
+                                <input type="number" placeholder="PRECIO POR CONSULTA" name="precio" id="precio">
+                                <p>Horario consulta: De: <input type="number" name="" id=""> A: <input type="number" name="" id=""></p>
+                                <button>GUARDAR</button>
+                            </div>
+                            
+                        </div>
+                        
                     </div>
                     <!------------------------------------------->
                     

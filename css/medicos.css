@@ -121,6 +121,23 @@
     font-size: 20px;
 }
 
+
+
+/* --------------- CONTAINER ITEM ACCOUNT --------------- */
+
+.info-account{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    background-color: white;
+}
+
+.inputs{
+    flex-direction: column;
+}
+
+/* ------------------------------------------------------- */
+
 /* --------------- CONTAINER MAIN (FIN) --------------- */
 
 /* BACKGROUND */

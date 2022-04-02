@@ -125,16 +125,105 @@
 
 /* --------------- CONTAINER ITEM ACCOUNT --------------- */
 
+
 .info-account{
     width: 100%;
-    height: 100%;
-    border-radius: 1rem;
+    height: auto;
     background-color: white;
+    border-radius: 1rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 20px 0;
+
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-.inputs{
-    flex-direction: column;
+.info-account::-webkit-scrollbar {
+    width: 12px;               
 }
+  
+.info-account::-webkit-scrollbar-track {
+    background: #fff;        
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem ;
+}
+  
+.info-account::-webkit-scrollbar-thumb {
+    background-color: #030419;    
+    border-radius: 15px;     
+}
+
+.info-account p{
+    margin: 0 0 10px 0;
+}
+
+.info-account p:first-child{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.info-account input{
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 20px;
+}
+
+.info-account input:not(input[type="radio"], input[type="number"], input[type="date"], input[class="dia-semana"]){
+    width: 415px;
+    height: 40px;
+}
+
+.info-account input[type="date"]{
+    width: 215px;
+}
+
+.info-account input[type="number"]{
+    width: 100px;
+}
+
+.info-account > input[type="number"]{
+    width: 415px;
+}
+
+.textArea textarea{
+    font-family: "Poppins", sans-serif;
+    width: 415px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+input::placeholder, textarea::placeholder {
+    font-family: "Poppins", sans-serif;
+    letter-spacing: .1rem;
+    padding-left: 20px;
+}
+
+input[class="dia-semana"]{
+    width: 200px;
+}
+
+.btnUser {
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    background-color: #030419;
+    letter-spacing: .1rem;
+    border-radius: .3rem;
+    padding: 15px 0 15px 0;
+    width: 415px;
+}
+
+.btnUser a {
+    color: white;
+    font-size: 18px;
+}
+
+.btnUser:hover {
+    background-color: #495057;
+    cursor: pointer;
+}
+
+
 
 /* ------------------------------------------------------- */
 

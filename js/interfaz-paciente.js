@@ -42,3 +42,5 @@ document.getElementById("img_calendario").addEventListener("click",function(even
    clicked("img_calendario");
    console.log('Click en cuenta');
 });
+
+function form_s

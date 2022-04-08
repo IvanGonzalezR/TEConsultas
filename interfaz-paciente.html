@@ -39,13 +39,13 @@
               class="container-patient__left__text flex column centerX centerY"
             >
               <img
-                src="/recursos/img/image 3.png"
+                src="/recursos/img/yisus.jpg"
                 alt=""
                 srcset=""
                 class="imgRedonda"
               />
-              <h5 class="container-patient__left__title">JUAN MANUEL</h5>
-              <span>juanma@gmail.com</span>
+              <h5 class="container-patient__left__title">Jesús López</h5>
+              <span>jesuslopez19@gmail.com</span>
             </div>
             <div class="container-patient__left__iconos flex column centerX centerY">
               <div id="img_doctor">
@@ -65,8 +65,36 @@
 
           <div class="container-patient__rigth flex column centerX">
             <div id="configuracion_cuenta">
-              <h2 class="black-text">Configuracion de la cuenta</h2>
-              <span>*Campo obligatorio</span>
+              <h2 >Configuracion de la cuenta</h2>
+
+              <form class="form-paciente flex row" id="form_cuenta">
+              <div class="labels flex column centerX">
+                <span>User_ID</span>
+                <span>Nombre</span>
+                <span>Correo</span>
+                <span>Contraseña</span>
+                <span>Dirección</span>
+                <span>Fecha de Nacimiento</span>
+                <span>Sexo</span>
+                <span>Discapacidades</span>
+                <span>Tipo de sangre</span>
+                <span>Subir foto del perfil</span>
+              </div>
+
+              <div class="inputs flex column centerX">
+                <input type="text" placeholder="1" readonly="true"/>
+                <input type="text" placeholder="Jesús López" readonly="true"/>
+                <input type="text" name="correo" id="correo" placeholder="jesuslopez19@gmail.com" readonly="true"/>
+                <input type="password" name="password" id="password" placeholder="********" readonly="true"/>
+                <input type="text" name="direccion" id="direccion" placeholder="Col. Centro #345,  Gomez Palacio" readonly="true"/>
+                <input type="date" name="fecha" id="fecha" value="1999-10-24" min="1900-01-01" max="2022-01-01" readonly="true"/>
+                <input type="text" name="sexo" id="direccion" placeholder="Masculino" readonly="true"/>
+                <input type="text" name="discapacidades" id="discapacidades" placeholder="Ninguna" readonly="true"/>
+                <input type="text" name="tipo_sangre" id="tipo_sangre" placeholder="B+" readonly="true"/>
+                <input type="file" name="foto" id="foto" />
+              </div>
+            </form>
+
             </div>
           </div>
         </div>

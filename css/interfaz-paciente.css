@@ -2,8 +2,46 @@
    text-align: center;
 }
 
+h2{
+   margin-bottom: 3rem;
+}
+
 /* #img_cuenta {} */
+.imgRedonda{
+   border-radius: 50%;
+   border: 1px solid #ccc;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
 
 #configuracion_cuenta {
    display: block;
+}
+
+#form_cuenta{
+   margin: 0;
+   justify-content: space-between;
+   width: 90%;
+   line-height: 3rem;
+}
+
+#form_cuenta div{
+   display: flex;
+   justify-content: space-around;
+   line-height: 3rem;
+   height: auto ;
+}
+
+#form_cuenta div:nth-child(2){
+   width: 30vw;
+}
+
+#form_cuenta input{
+   width: 100%;
+   height: 3rem;
+   border: none;
+   border-bottom: 1px solid rgb(171, 171, 171);
+   padding: 0;
+   margin: 0;
+   font-size: 1.2rem;
 }

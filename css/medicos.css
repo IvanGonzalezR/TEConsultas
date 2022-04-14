@@ -121,6 +121,10 @@
     font-size: 20px;
 }
 
+.btnInicia:hover {
+    background-color: #495057;
+    cursor: pointer;
+}
 
 
 /* --------------- CONTAINER INFO ACCOUNT --------------- */

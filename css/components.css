@@ -41,7 +41,8 @@ h5 {
 }
 
 p,
-span {
+span,
+button {
   font-family: "Poppins", sans-serif;
   font-size: 1.125rem;
 }

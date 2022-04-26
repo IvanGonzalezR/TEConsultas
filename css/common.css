@@ -28,4 +28,37 @@
 
 .grid {
   display: grid;
+<<<<<<< HEAD
 }
+=======
+}
+
+.white {
+  color: #ffffff;
+}
+
+.black {
+  color: #030419;
+}
+
+.black_text {
+  color: #000000;
+}
+
+.flex-start {
+  align-items: flex-start;
+}
+
+.imgRedonda {
+  border-radius: 180px;
+  background-color: black;
+}
+
+.tamIconos{
+  width: 2.5rem;/*40px*/
+}
+
+.ocultar{
+  display: none;
+}
+>>>>>>> elroro

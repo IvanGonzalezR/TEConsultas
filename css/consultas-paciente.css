@@ -1,0 +1,138 @@
+/* --------------- CONTAINER MAIN --------------- */
+.container-main{
+    position: absolute;
+    width: 95%;
+    height: 80vh;
+    z-index: 5;
+    top: 15%;
+    left: 2.5%;
+    justify-content: space-between;
+}
+
+.menu-container-main{
+    width: 15%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #495057;
+    padding: 5px;
+    border-radius: 1rem;
+}
+
+.info-paciente img{
+
+}
+
+.items{
+    width: 50%;
+    /*height: 50%;*/
+    height: auto;
+    background-color: #030419;
+    border-radius: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .fa-solid{
+    width: 60px;
+    height: 60px;
+    color: white;
+} */
+
+/* .calendario{
+    width: 60px;
+    height: 60px;
+} */
+
+.container-item{
+    width: 83%;
+    border-radius: 1rem;
+    justify-content: space-between;
+}
+
+.consultas-paciente{
+    width: 100%;
+    background-color: #DCDCDC;
+    border-radius: 1rem;
+    padding: 1rem;
+    flex-direction: column;
+    
+}
+
+.consultas-paciente > p{
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+.consultas{
+    width: 100%;
+    height: 100%;
+
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* ==== CONSULTAS PACIENTE SCROLLBAR ==== */
+.consultas::-webkit-scrollbar {
+    width: 8px;               
+}
+  
+.consultas::-webkit-scrollbar-track {      
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem ;
+}
+  
+.consultas::-webkit-scrollbar-thumb {
+    background-color: #030419;    
+    border-radius: 20px;  
+}
+/*  ------------------------------------- */
+
+.carta-consulta{
+    width: 400px;
+    height: 166px;
+    padding: .5rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    margin: 0 1.1rem 1.1rem 0
+}
+
+.carta-consulta img{
+    border-radius: 1rem;
+    margin-right: 1rem;
+}
+
+.info-carta-consulta{
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btn-ir-cons{
+    width: 100px;
+    height: 30px;
+    color: #fff;
+    border-radius: .5rem;
+    border-style: none;
+    background-color: #030419;
+}
+
+.btn-ir-cons:hover{
+    color: #000;
+    background-color: #90BEDE;
+}
+
+/* --------------- CONTAINER MAIN (FIN) --------------- */
+
+/* BACKGROUND */
+.background {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    /*VER*/
+    z-index: 1;
+}

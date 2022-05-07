@@ -10,8 +10,8 @@
 }
 
 .menu-container-main{
-    width: 15%;
-    justify-content: center;
+    width: 20%;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     background-color: #495057;
@@ -19,18 +19,37 @@
     border-radius: 1rem;
 }
 
-.info-paciente img{
+.info-paciente{
+    flex-direction: column;
+    align-items: center;
+}
 
+.info-paciente img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.info-paciente p:first-of-type{
+    color: #fff;
+    margin: .5rem 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.info-paciente p:last-of-type{
+    color: #fff;
+    font-size: 16px;
 }
 
 .items{
-    width: 50%;
+    width: 30%;
     /*height: 50%;*/
-    height: auto;
+    height: 200px;
     background-color: #030419;
     border-radius: 1rem;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -46,7 +65,7 @@
 } */
 
 .container-item{
-    width: 83%;
+    width: 78%;
     border-radius: 1rem;
     justify-content: space-between;
 }
@@ -94,8 +113,8 @@
 /*  ------------------------------------- */
 
 .carta-consulta{
-    width: 400px;
-    height: 166px;
+    width: 420px;
+    height: 200px;
     padding: .5rem;
     background-color: #fff;
     border-radius: 1rem;
@@ -113,7 +132,7 @@
 }
 
 .btn-ir-cons{
-    width: 100px;
+    width: 150px;
     height: 30px;
     color: #fff;
     border-radius: .5rem;

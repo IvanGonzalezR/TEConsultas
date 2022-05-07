@@ -189,6 +189,11 @@
     width: 415px;
 }
 
+.info-account img{
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+
 .textArea textarea{
     font-family: "Poppins", sans-serif;
     width: 415px;

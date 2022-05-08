@@ -1,0 +1,206 @@
+/* --- CONTENEDOR --- */
+.contenedor{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(230, 230, 230);
+}
+/* --- MENU --- */
+.menu{
+    height: 70px;
+}
+
+/* --- CONTENIDO --- */
+.contenido{
+    position: absolute;
+    width: 95%;
+    height: 80vh;
+    z-index: 2;
+    left: 2.5%;
+    top: 15%;
+    justify-content: space-between;
+}
+
+.doctores{
+    width: 70%;
+    height: 100%;
+    padding: 1rem;
+    background-color: #dcdcdc;
+    border-radius: 1rem;
+}
+
+.doctores > p{
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.menu-doctores{
+    width: 100%;
+    height: 92%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    /* background-color: black; */
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* --- MENU DOCTORES SCROLLBAR --- */
+.menu-doctores::-webkit-scrollbar {
+    width: 8px;               
+}
+  
+.menu-doctores::-webkit-scrollbar-track {      
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem ;
+}
+  
+.menu-doctores::-webkit-scrollbar-thumb {
+    background-color: #030419;    
+    border-radius: 20px;  
+}
+
+/* -------------------------------- */
+
+.carta-doctor{
+    width: 400px;
+    height: 166px;
+    padding: .5rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    margin: 0 1.1rem 1.1rem 0
+}
+
+.carta-doctor img{
+    width: 150px;
+    height: 150px;
+    border-radius: 1rem;
+    margin-right: 1rem;
+}
+
+.info-carta-doctor{
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-carta-doctor p:first-child,
+span{
+    color: #030419;
+    font-weight: bold;
+}
+
+.btn-ver-mas{
+    width: 100px;
+    height: 30px;
+    color: #fff;
+    border-radius: .5rem;
+    border-style: none;
+    background-color: #030419;
+}
+
+.btn-ver-mas:hover{
+    color: #000;
+    background-color: #90BEDE;
+}
+
+.info-doctores{
+    width: 29%;
+    height: 100%;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+
+.info-doctores > p{
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.info-completa{
+    width: 100%;
+    height: 96%;
+    flex-direction: column;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.info-completa img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.info-completa p{
+    margin-top: 1rem;
+}
+
+.info-completa p[class="titulo"]{
+    font-weight: bold;
+    text-align: center;
+}
+
+/* .info-completa p:first-of-type{
+    color: #030419;
+    font-weight: bold;
+    text-align: center;
+} */
+
+/* --- INFO COMPLETA SCROLLBAR --- */
+.info-completa::-webkit-scrollbar {
+    width: 8px;               
+}
+  
+.info-completa::-webkit-scrollbar-track {      
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem ;
+}
+  
+.info-completa::-webkit-scrollbar-thumb {
+    background-color: #030419;    
+    border-radius: 20px;  
+}
+/* ------------------------------- */
+.horarios-citas{
+    
+
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.btn-horarios-citas{
+    width: 60px;
+    height: 40px;
+    margin: 10px 10px 0 0;
+    color: #fff;
+    background-color: #90BEDE;
+    border-style: none;
+    border-radius: .5rem;
+}
+
+.btn-horarios-citas:hover{
+    background-color: #030419;
+}
+
+.btn-agendar-cita{
+    width: 150px;
+    height: 40px;
+    margin: 10px 0 10px 0;
+    color: #fff;
+    background-color: #030419;
+    border-style: none;
+    border-radius: .5rem;
+}
+
+.btn-agendar-cita:hover{
+    background-color: #495057;
+}
+
+/* --- BACKGROUND --- */
+.background {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}

@@ -9,8 +9,6 @@
 header {
   width: 100%;
   height: 8vh;
-  padding: 0 7rem;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -39,11 +37,10 @@ header {
 .header-bottom {
   color: #fff;
   width: 100%;
-  height: 25%;
+  height: 35%;
   background-color: #060a25;
-  position: absolute;
-  top: 90%;
-  z-index: 1;
+  position: relative;
+  /* transform: translateX(0%) translateY(-20%); */
 }
 
 .header-bottom :first-child {
@@ -51,4 +48,382 @@ header {
   text-align: center;
   position: relative;
   top: 40%;
+}
+
+.container {
+  max-width: 1000px;
+  /* flex: 1; */
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+
+}
+
+/*----------------------- parte del juanma ---------------------------------*/
+
+.main {
+  width: 100vw;
+  height: 60vh;
+  margin: 0px;
+}
+
+.overlay {
+  width: 100vw;
+  height: 50vh;
+  min-height: 40rem;
+  margin: 0px;
+  position: relative;
+  background: rgb(0, 0, 10, 0.475);
+}
+
+.navigation_div {
+  display: flex;
+  flex-direction: row;
+  height: 3rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation {
+  height: 3.125rem;
+  width: 20rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+video {
+  position: absolute;
+  display: flex;
+
+  height: 130vh;
+  width: 100vw;
+  margin: 0px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-16%);
+  z-index: -1;
+}
+
+.titulo {
+  width: 100%;
+  /* height: 10vh; */
+  line-height: 1;
+  position: absolute;
+  margin-top: 17vh;
+  text-align: center;
+}
+
+/* Inicio de sesion*/
+.background-login {
+  background-image: url("/recursos/img/background-inicio.png");
+  background-size: cover;
+  height: 100vh;
+}
+
+.container-login {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 8rem;
+}
+
+.container__line {
+  margin: 0 8.5rem;
+}
+
+.container__left h4,
+.container__rigth h4 {
+  margin-bottom: 2rem;
+}
+
+.container__left span {
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+.botones {
+  height: fit-content;
+  width: 100%;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.titulo h1 {
+  /* font-size: 60px; */
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.titulo h3 {
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.header-bottom {
+  width: 100%;
+  height: 25vh;
+  margin: 0px;
+  background-color: #060A25;
+  position: inherit;
+  /* top: 90%; */
+  z-index: -11;
+  /* transform: translateY(-20%); */
+}
+
+#wrapper_section2 {
+  height: 50vh;
+  width: 100vw;
+  display: grid;
+  padding: 5rem 7rem;
+  grid-template-columns: repeat(3, 1);
+  grid-template-rows: 8rem;
+  /* gap: 1rem; */
+  grid-auto-rows: minmax(7rem, auto);
+  background-color: #f3f3f3;
+}
+
+#section2 {
+  /* height: 70vh; */
+  width: 100%;
+}
+
+.section2_one {
+  grid-column: 2/-2;
+  grid-row: 1;
+  padding-right: 28%;
+}
+
+.section2_two {
+  grid-column: 0;
+  grid-row: 2;
+  color: #000000;
+  line-height: 1.5rem;
+}
+
+.section2_three {
+  grid-column: 1;
+  grid-row: 2;
+  line-height: 1.5rem;
+}
+
+#section3 {
+  height: 75vh;
+  width: 100%;
+  align-items: center;
+  padding: 8rem 5rem 5rem 5rem;
+}
+
+#wrapper_section3 {
+  height: 100%;
+  width: 100%;
+  max-height: 20rem;
+  display: grid;
+  grid-template-columns: 25rem 25rem;
+  grid-template-rows: 100%;
+  justify-items: center;
+  justify-content: center;
+  grid-gap: 3rem;
+}
+
+.section3_one h2 {
+  margin-bottom: 1rem;
+}
+
+.section3_one p {
+  line-height: 1.5rem;
+}
+
+.section3_two {
+  height: 100%;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  justify-items: center;
+  justify-content: center;
+  /* align-items: center; */
+  grid-gap: 1rem;
+}
+
+.section3_two img {
+  position: relative;
+  height: 100%;
+  border-radius: 1.4rem;
+  z-index: 1;
+}
+
+.section3_two #img1 {
+  background: url("/recursos/img/cuadro1_hover.png")
+}
+
+#section4 {
+  position: relative;
+  margin-bottom: 20vh;
+  padding-bottom: 12vh;
+}
+
+#wrapper_section4 {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: 16rem;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+  grid-gap: 2.5rem;
+}
+
+#img1_section4 {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  width: 26rem;
+  height: 23rem;
+  border-radius: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #030419;
+}
+
+#img2_section4 {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  width: 26rem;
+  height: 23rem;
+  border-radius: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #030419;
+}
+
+#wrapper_section4 {
+  height: 100%;
+  width: 100%;
+  max-height: 20rem;
+  display: grid;
+}
+
+.form input {
+  width: 446px;
+  height: 48px;
+  left: 738px;
+  top: 697px;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+/* Interfaz patient*/
+.background-patient {
+  background-image: url("/recursos/img/background-interfaz-paciente.png");
+  background-size: cover;
+  height: 100vh;
+}
+
+.container-patient {
+  height: 80vh;
+}
+
+.container-patient__left {
+  background-color: #7c7e80;
+  margin: 0 2rem;
+  width: 17%;
+  border-radius: 1.5rem;
+}
+
+.container-patient__left__text {
+  padding-bottom: 3rem;
+}
+
+.container-patient__left__text img {
+  width: 70%;
+  margin-bottom: 0.7rem;
+  border-radius: 50%;
+}
+
+.container-patient__left__text span {
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.container-patient__left__title {
+  color: white;
+  text-align: center;
+}
+
+.container-patient__left__iconos {
+  background-color: #030419;
+  padding: 1rem 0.5rem;
+  border-radius: 1.5rem;
+}
+
+.container-patient__left__iconos img {
+  padding-top: 1rem;
+  width: 35%;
+}
+
+.container-patient__rigth {
+  background-color: #ffffff;
+  width: 77%;
+  padding-left: 4rem;
+  border-radius: 1.5rem;
+}
+
+.container-patient__rigth h2 {
+  padding-bottom: 1rem;
+}
+
+.footer {
+  position: relative;
+  height: 23vh;
+  width: 100%;
+  background-color: #030419;
+}
+
+.foo {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 50% 40%;
+  align-items: center;
+  grid-gap: 2rem;
+}
+
+.foo h4 {
+  padding-bottom: 0.5rem;
+}
+
+.foo h4:hover {
+  color: #d2d2d2;
+  cursor: default;
+}
+
+.foo-left {
+  color: #fff;
+  height: 50%;
+  line-height: 1.5rem;
+}
+
+#img1_section4>p {
+  line-height: 1.5rem;
+}
+
+.foo-right {
+  color: #fff;
+  height: 50%;
+  line-height: 1.5rem;
+}
+
+#img2_section4>p {
+  line-height: 1.5rem;
 }

@@ -1,3 +1,7 @@
+.none{
+    display: none;
+}
+
 /* --------------- CONTAINER MAIN --------------- */
 .container-main{
     position: absolute;
@@ -331,6 +335,3 @@ input[class="dia-semana"]{
     z-index: 1;
 }
 
-.none{
-    display: none;
-}

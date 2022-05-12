@@ -44,7 +44,6 @@
 
 .items{
     width: 30%;
-    /*height: 50%;*/
     height: 200px;
     background-color: #030419;
     border-radius: 1rem;
@@ -53,37 +52,15 @@
     align-items: center;
 }
 
-/* .fa-solid{
-    width: 60px;
-    height: 60px;
-    color: white;
-} */
-
-/* .calendario{
-    width: 60px;
-    height: 60px;
-} */
-
 .none{
     display: none;
 }
 
-.consultas-paciente{
-    width: 100%;
-    /* height: 100%; */
-    margin-left: 3rem;
-    background-color: #DCDCDC;
-    border-radius: 1rem;
-    padding: 2rem;
-    flex-direction: column; 
-    justify-content: start;
-}
 
 #form_cuenta{
    margin: 0;
    justify-content: space-between;
    width: 95%;
-   /* height: 100%; */
    line-height: 3rem;
 }
 
@@ -114,94 +91,194 @@
 }
 
 #configuracion_cuenta {
-   /* display: block; */
-   /* height: 100%; */
    overflow-x: hidden;
    overflow-y: auto;
 }
 
-.consultas-paciente > h2{
-    font-weight: bold;
-    /* padding-bottom: 1rem;
-    margin-bottom: 2rem; */
+.container-item{
+    width: 79%;
+    height: 100%;
 }
 
-.consultas{
+/* --------------- CONTAINER CONSULTAS / RECETAS ------------------- */
+.container_cons_rec{
     width: 100%;
     height: 100%;
+    
+    justify-content: space-between;
+}
 
-    flex-wrap: wrap;
-    align-content: flex-start;
-    align-items: flex-start;
+.container_consultas{
+    width: 70%;
+    height: 100%;
+
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #DCDCDC;
 
     overflow-x: hidden;
     overflow-y: auto;
 }
 
 /* ==== CONSULTAS PACIENTE SCROLLBAR ==== */
-.consultas::-webkit-scrollbar {
-    width: 8px;               
+.container_consultas::-webkit-scrollbar {
+    width: 8px;            
 }
   
-.consultas::-webkit-scrollbar-track {      
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem ;
-}
-  
-.consultas::-webkit-scrollbar-thumb {
+.container_consultas::-webkit-scrollbar-thumb {
     background-color: #030419;    
     border-radius: 20px;  
 }
 /*  ------------------------------------- */
 
-/* ==== CONFIGURACION CUENTA SCROLLBAR ==== */
-.container-item::-webkit-scrollbar {
-    width: 8px;               
-}
-  
-.container-item::-webkit-scrollbar-track {      
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem ;
-}
-  
-.container-item::-webkit-scrollbar-thumb {
-    background-color: #030419;    
-    border-radius: 20px;  
-}
-/*  ------------------------------------- */
-
-.carta-consulta{
-    width: 420px;
-    height: 200px;
-    padding: .5rem;
-    background-color: #fff;
-    border-radius: 1rem;
-    margin: 0 1.1rem 1.1rem 0
+.container_consultas > p{
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.carta-consulta img{
+.consultas{
+    padding: 1rem 0;
+    
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.carta_consulta{
+    width: 350px;
+    height: 150px;
+
+    margin: 0 1rem 1rem 0;
+
     border-radius: 1rem;
-    margin-right: 1rem;
+    background-color: #FFF;
+}
+
+.carta_consulta img{
+    border-radius: 1rem;
 }
 
 .info-carta-consulta{
     flex-direction: column;
+
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.btn-ir-cons,
+.btn-ir-rec{
+    background-color: #030419;
+    color: #FFF;
+    border-radius: .5rem;
+    border: none;
+}
+
+.btn-ir-cons:hover,
+.btn-ir-rec:hover{
+    background-color: #90BEDE;
+}
+
+.container_recetas{
+    width: 29%;
+    height: 100%;
+
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #DCDCDC;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container_recetas > p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ==== CONSULTAS PACIENTE SCROLLBAR ==== */
+.container_recetas::-webkit-scrollbar {
+    width: 8px;            
+}
+  
+.container_recetas::-webkit-scrollbar-thumb {
+    background-color: #030419;    
+    border-radius: 20px;  
+}
+/*  ------------------------------------- */
+
+.recetas_paciente{
+    width: 35%;
+    background-color: #DCDCDC;
+}
+
+.recetas{
+    padding: 1rem 0;
+}
+
+.carta_receta{
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #FFF;
+}
+
+.carta_receta img{
+    width: 100px;
+}
+
+.info-carta-receta{
+    padding-left: 1rem;
+    flex-direction: column;
     justify-content: space-between;
 }
 
-.btn-ir-cons{
-    width: 150px;
-    height: 30px;
-    color: #fff;
-    border-radius: .5rem;
-    border-style: none;
-    background-color: #030419;
+
+/* ----------------------------------------------------------------- */
+
+/* ------------------------- INFO PACIENTE ------------------------ */
+.informacion_paciente{
+    width: 100%;
+    height: 100%;
+
+    background-color: #DCDCDC;
+    border-radius: 1rem;
+    padding: 1rem;
+
+    flex-direction: column;
 }
 
-.btn-ir-cons:hover{
-    color: #000;
+.informacion_paciente > p{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* ==== IFNO PACIENTE SCROLLBAR ==== */
+.informacion_paciente::-webkit-scrollbar {
+    width: 8px;            
+}
+  
+.informacion_paciente::-webkit-scrollbar-thumb {
+    background-color: #030419;    
+    border-radius: 20px;  
+}
+/*  ------------------------------------- */
+
+.btn-guardar{
+    width: 250px;
+    padding: .5rem 0;
+    background-color: #030419;
+    color: #FFF;
+    border-radius: .5rem;
+    border: none;
+}
+
+.btn-guardar:hover{
     background-color: #90BEDE;
 }
+/* ----------------------------------------------------------------- */
 
 /* --------------- CONTAINER MAIN (FIN) --------------- */
 

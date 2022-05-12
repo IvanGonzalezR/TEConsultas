@@ -64,112 +64,88 @@
                             </lord-icon>
                         </a>
                         
-                        <!-- <a href="">
-                            <lord-icon
-                                src="https://cdn.lordicon.com/uvextprq.json"
-                                trigger="hover"
-                                colors="primary:#ffffff"
-                                style="width:60px;height:60px;">
-                            </lord-icon>
-                        </a>
-                        <lord-icon
-                            src="https://cdn.lordicon.com/qlncusvo.json"
-                            trigger="hover"
-                            colors="primary:#ffffff"
-                            style="width:60px;height:60px">
-                        </lord-icon> -->
-                        
                     </div>
                 </div>
+
                 <div class="container-item flex">
-                    <div class="consultas-paciente flex" id="consultas">
-                        <p>CONSULTAS</p>
-                        <div class="consultas flex">
-                            <div class="carta-consulta flex">
-                                <img src="/recursos/img/image 3.png" alt="doctor">
-                                <div class="info-carta-consulta flex">
-                                    <p>Juan Manuel Alfaro Aguilera</p>
-                                    <p>Fecha: <span>1/May/2022</span></p>
-                                    <button class="btn-ir-cons" >Ir consulta</button>
+                    <div class="container_cons_rec flex">
+                        <div class="container_consultas">
+                            <p>CONSULTAS</p>
+                            <div class="consultas flex">
+                                <div class="carta_consulta flex">
+                                    <img src="/recursos/img/image 3.png" alt="doctor">
+                                    <div class="info-carta-consulta flex">
+                                        <p>Juan Manuel Alfaro Aguilera</p>
+                                        <p>Fecha: <span>1/May/2022</span></p>
+                                        <button class="btn-ir-cons" >Ir consulta</button>
+                                    </div>
+                                </div>
+
+                                <div class="carta_consulta flex">
+                                    <img src="/recursos/img/image 3.png" alt="doctor">
+                                    <div class="info-carta-consulta flex">
+                                        <p>Juan Manuel Alfaro Aguilera</p>
+                                        <p>Fecha: <span>1/May/2022</span></p>
+                                        <button class="btn-ir-cons" >Ir consulta</button>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="carta-consulta flex">
-                                <img src="/recursos/img/image 3.png" alt="doctor">
-                                <div class="info-carta-consulta flex">
-                                    <p>Juan Manuel Alfaro Aguilera</p>
-                                    <p>Fecha: <span>1/May/2022</span></p>
-                                    <button class="btn-ir-cons" >Ir consulta</button>
-                                </div>
-                            </div>
-
-                            <div class="carta-consulta flex">
-                                <img src="/recursos/img/image 3.png" alt="doctor">
-                                <div class="info-carta-consulta flex">
-                                    <p>Juan Manuel Alfaro Aguilera</p>
-                                    <p>Fecha: <span>1/May/2022</span></p>
-                                    <button class="btn-ir-cons" >Ir consulta</button>
-                                </div>
-                            </div>
-
-                            <div class="carta-consulta flex">
-                                <img src="/recursos/img/image 3.png" alt="doctor">
-                                <div class="info-carta-consulta flex">
-                                    <p>Juan Manuel Alfaro Aguilera</p>
-                                    <p>Fecha: <span>1/May/2022</span></p>
-                                    <button class="btn-ir-cons" >Ir consulta</button>
-                                </div>
-                            </div>
-
-                            <div class="carta-consulta flex">
-                                <img src="/recursos/img/image 3.png" alt="doctor">
-                                <div class="info-carta-consulta flex">
-                                    <p>Juan Manuel Alfaro Aguilera</p>
-                                    <p>Fecha: <span>1/May/2022</span></p>
-                                    <button class="btn-ir-cons" >Ir consulta</button>
+                        </div>
+    
+                        <div class="container_recetas">
+                            <p>RECETAS</p>
+                            <div class="recetas">
+                                <div class="carta_receta flex">
+                                    <img src="/recursos/img/receta_imagen.png" alt="receta_imagen">
+                                    <div class="info-carta-receta flex">
+                                        <p>Receta del doctor: </p>
+                                        <button class="btn-ir-rec" >Ver</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class=" container-item flex column none" 
-                    id="configuracion_cuenta">
-                        <div class="consultas-paciente 
-                        flex centerX none"
-                        id="configuracion_cuenta_hijo">
-                        <h2 >Configuracion de la cuenta</h2>
 
-                        <form class="flex row" id="form_cuenta">
-                        <div class="labels flex column centerX">
-                            <span>User_ID</span>
-                            <span>Nombre</span>
-                            <span>Correo</span>
-                            <span>Contraseña</span>
-                            <span>Dirección</span>
-                            <span>Fecha de Nacimiento</span>
-                            <span>Sexo</span>
-                            <span>Discapacidades</span>
-                            <span>Tipo de sangre</span>
-                            <span>Subir foto del perfil</span>
-                        </div>
+                    
+                    <div class="informacion_paciente flex none"id="configuracion_cuenta">
+                        <p>Configuracion de la cuenta</p>
 
-                        <div></div>
+                        <form class="form_paciente flex row" id="form_cuenta">
+                            <div class="labels flex column centerX">
+                                <span>User_ID</span>
+                                <span>Nombre</span>
+                                <span>Correo</span>
+                                <span>Contraseña</span>
+                                <span>Dirección</span>
+                                <span>Fecha de Nacimiento</span>
+                                <span>Sexo</span>
+                                <span>Discapacidades</span>
+                                <span>Tipo de sangre</span>
+                                <span>Subir foto del perfil</span>
+                            </div>
 
-                        <div class="inputs flex column centerX">
-                            <input type="text" placeholder="1" readonly="true"/>
-                            <input type="text" placeholder="Jesús López" readonly="true"/>
-                            <input type="text" name="correo" id="correo" placeholder="jesuslopez19@gmail.com" readonly="true"/>
-                            <input type="password" name="password" id="password" placeholder="********" readonly="true"/>
-                            <input type="text" name="direccion" id="direccion" placeholder="Col. Centro #345,  Gomez Palacio" readonly="true"/>
-                            <input type="date" name="fecha" id="fecha" value="1999-10-24" min="1900-01-01" max="2022-01-01" readonly="true"/>
-                            <input type="text" name="sexo" id="direccion" placeholder="Masculino" readonly="true"/>
-                            <input type="text" name="discapacidades" id="discapacidades" placeholder="Ninguna" readonly="true"/>
-                            <input type="text" name="tipo_sangre" id="tipo_sangre" placeholder="B+" readonly="true"/>
-                            <input type="file" name="foto" id="foto" />
-                        </div>
+                            <div class="inputs flex column centerX">
+                                <input type="text" placeholder="1" readonly="true"/>
+                                <input type="text" placeholder="Jesús López" readonly="true"/>
+                                <input type="text" name="correo" id="correo" placeholder="jesuslopez19@gmail.com" readonly="true"/>
+                                <input type="password" name="password" id="password" placeholder="********" readonly="true"/>
+                                <input type="text" name="direccion" id="direccion" placeholder="Col. Centro #345,  Gomez Palacio" readonly="true"/>
+                                <input type="date" name="fecha" id="fecha" value="1999-10-24" min="1900-01-01" max="2022-01-01" readonly="true"/>
+                                <input type="text" name="sexo" id="direccion" placeholder="Masculino" readonly="true"/>
+                                <input type="text" name="discapacidades" id="discapacidades" placeholder="Ninguna" readonly="true"/>
+                                <input type="text" name="tipo_sangre" id="tipo_sangre" placeholder="B+" readonly="true"/>
+                                <input type="file" name="foto" id="foto" />
+                            </div>
                         </form>
 
-                        </div>
+                        <button class="btn-guardar"> GUARDAR</button>
                     </div>
+
+                        
+                    
+                    
+
+                    
                     
                 </div>
                 

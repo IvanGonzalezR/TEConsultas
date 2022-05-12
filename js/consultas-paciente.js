@@ -28,14 +28,14 @@ let iconAccount = document.getElementById('iconAccount');
 let iconCalendario = document.getElementById('iconCalendario');
 
 // esconder el Div de consultas
-iconCalendario.addEventListener('click', function() {
+iconAccount.addEventListener('click', function() {
       container_cons_rec.classList.add('none');
       confCuenta.classList.remove('none');
       //confCuentaHijo.classList.remove('none');
 });
 
 // esconder el Div de configuracion de cuenta
-iconAccount.addEventListener('click', function() {
+iconCalendario.addEventListener('click', function() {
       confCuenta.classList.add('none');
       container_cons_rec.classList.remove('none');
       //confCuentaHijo.classList.add('none');

@@ -40,6 +40,14 @@
             <div class="container-main flex">
                 <div class="menu-container-main flex">
                     <div class="items flex">
+                        <a href="" id="iconAccount">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/dklbhvrt.json"
+                                trigger="hover"
+                                colors="primary:#ffffff"
+                                style="width:60px;height:60px;">
+                            </lord-icon>
+                        </a>
                         <a href="" id="iconCalendario">
                             <lord-icon
                                 src="https://cdn.lordicon.com/drtetngs.json"
@@ -48,86 +56,77 @@
                                 style="width:60px;height:60px;">
                             </lord-icon>
                         </a>
-                        <a href="" id="account">
+                        <a href="" id="iconReceta">
                             <lord-icon
-                                src="https://cdn.lordicon.com/dklbhvrt.json"
+                                src="https://cdn.lordicon.com/sygggnra.json"
                                 trigger="hover"
                                 colors="primary:#ffffff"
-                                style="width:60px;height:60px;">
+                                style="width:60px;height:60px">
                             </lord-icon>
                         </a>
-                        <a href="">
-                            <lord-icon
-                                src="https://cdn.lordicon.com/uvextprq.json"
-                                trigger="hover"
-                                colors="primary:#ffffff"
-                                style="width:60px;height:60px;">
-                            </lord-icon>
-                        </a>
-                        <lord-icon
-                            src="https://cdn.lordicon.com/qlncusvo.json"
-                            trigger="hover"
-                            colors="primary:#ffffff"
-                            style="width:60px;height:60px">
-                        </lord-icon>
+
                         
                     </div>
                 </div>
                 <div class="container-item flex">
                     <!--En el caso de seleccionar el calendario-->
+                    <div class="calendario flex none">
+
                     
-                    <div class="calendar">
-                        
-                        <table id="calendar">
-                            <div class="title-month"><caption></caption></div>
+                        <div class="calendar">
                             
-                            <thead>
-                                <tr>
-                                    <th>Lun</th><th>Mar</th><th>Mie</th><th>Jue</th><th>Vie</th><th>Sab</th><th>Dom</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <div class="consultas flex scroll">
-                        <p>CONSULTAS</p>
-                        <div class="card flex">
-                            <p>7 ABRIL 2022</p>
-                            <p>5:00 p.m</p>
-                            <p>Juan Manuel</p>
-                            <p>21 años</p>
-                            <div class="btnInicia flex">
-                                <a href="">INICIAR</a>
+                            <table id="calendar">
+                                <div class="title-month"><caption></caption></div>
+                                
+                                <thead>
+                                    <tr>
+                                        <th>Lun</th><th>Mar</th><th>Mie</th><th>Jue</th><th>Vie</th><th>Sab</th><th>Dom</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="consultas flex scroll">
+                            <p>CONSULTAS</p>
+                            <div class="card flex">
+                                <p>7 ABRIL 2022</p>
+                                <p>5:00 p.m</p>
+                                <p>Juan Manuel</p>
+                                <p>21 años</p>
+                                <div class="btnInicia flex">
+                                    <a href="">INICIAR</a>
+                                </div>
+                            </div>
+
+                            <div class="card flex">
+                                <p>7 ABRIL 2022</p>
+                                <p>5:00 p.m</p>
+                                <p>Juan Manuel</p>
+                                <p>21 años</p>
+                                <div class="btnInicia flex">
+                                    <a href="">INICIAR</a>
+                                </div>
+                            </div>
+
+                            <div class="card flex">
+                                <p>7 ABRIL 2022</p>
+                                <p>5:00 p.m</p>
+                                <p>Juan Manuel</p>
+                                <p>21 años</p>
+                                <div class="btnInicia flex">
+                                    <a href="">INICIAR</a>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="card flex">
-                            <p>7 ABRIL 2022</p>
-                            <p>5:00 p.m</p>
-                            <p>Juan Manuel</p>
-                            <p>21 años</p>
-                            <div class="btnInicia flex">
-                                <a href="">INICIAR</a>
-                            </div>
-                        </div>
-
-                        <div class="card flex">
-                            <p>7 ABRIL 2022</p>
-                            <p>5:00 p.m</p>
-                            <p>Juan Manuel</p>
-                            <p>21 años</p>
-                            <div class="btnInicia flex">
-                                <a href="">INICIAR</a>
-                            </div>
-                        </div>
                     </div>
                     <!------------------------------------------->
 
                     <!--Terminar informacion-->
 
-                    <!-- <div class="info-account flex">
+                    <div class="info-account flex none">
                         <p>Informacion de la cuenta</p>
 
                         <img src="/recursos/img/image 3.png" alt="imagen perfil">
@@ -149,11 +148,11 @@
                         <p>Dias semana: <input class="dia-semana" placeholder="Lunes" type="text" name="" id=""> a <input class="dia-semana" placeholder="Sabado" type="text" name="" id=""></p>
                         <div class="btnUser flex"><a href="">GUARDAR</a></div>
                             
-                    </div> -->
+                    </div>
                     <!------------------------------------------->
 
                     <!-- En caso de seleccionar recetas -->
-                    <!-- <div class="receta flex">
+                    <div class="receta flex">
                         <div class="headerR flex">
                             <img src="/recursos/img/logo_negro.png" alt="LOGO">
                             <div class="infoHeader">
@@ -184,7 +183,7 @@
                                 <p>Firma</p>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                     
                 </div>
             </div>
@@ -200,6 +199,6 @@
     
     <script src="./js/calendar.js"></script>
     <script src="./js/interfaz-medicos.js"></script>
-    <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
 </body>
 </html>

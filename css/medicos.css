@@ -1,3 +1,7 @@
+.none{
+    display: none;
+}
+
 /* --------------- CONTAINER MAIN --------------- */
 .container-main{
     position: absolute;
@@ -36,8 +40,9 @@
 }
 
 .calendario{
-    width: 60px;
-    height: 60px;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
 }
 
 .container-item{
@@ -329,3 +334,4 @@ input[class="dia-semana"]{
     /*VER*/
     z-index: 1;
 }
+

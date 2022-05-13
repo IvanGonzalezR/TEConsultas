@@ -1,30 +1,35 @@
-const ocultar = function(elem, elemChilds){
-    for (let i=0; i<elemChilds; i++) {
-        elem.children[i].className += ' ocultar';
-    };
-};
+let calendario = document.querySelector('.calendario');
+let infoAccount = document.querySelector('.info-account');
+let receta = document.querySelector('.receta');
 
-const aparecer = function(elem, elemChilds){
-    for (let i=0; i<elemChilds; i++) {
-        elem.children[i].classList.remove('ocultar');
-    };
-};
+//Botones
+let iconAccount = document.getElementById('iconAccount');
+let iconCalendario = document.getElementById('iconCalendario');
+let iconReceta = document.getElementById('iconReceta');
 
-const btn_account = document.getElementById('account');
-
-btn_account.addEventListener('click', function(){
+//Boton Cuenta
+iconAccount.addEventListener('click', function(event){
     event.preventDefault();
 
-    const container_item = document.querySelector('.container-item');
-    ocultar(container_item, 2);
+    infoAccount.classList.remove('none');
+    calendario.classList.add('none');
+    receta.classList.add('none');
 });
 
-const btn_calendar = document.getElementById('iconCalendario');
-
-btn_calendar.addEventListener('click', function(){
+//Boton Calendario
+iconCalendario.addEventListener('click', function(event){
     event.preventDefault();
 
-    const container_item = document.querySelector('.container-item');
-    aparecer(container_item, 2);
+    infoAccount.classList.add('none');
+    calendario.classList.remove('none');
+    receta.classList.add('none');
 });
 
+//Boton Receta
+iconReceta.addEventListener('click', function(event){
+    event.preventDefault();
+
+    infoAccount.classList.add('none');
+    calendario.classList.add('none');
+    receta.classList.remove('none');
+});

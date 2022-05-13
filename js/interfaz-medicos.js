@@ -31,5 +31,5 @@ iconReceta.addEventListener('click', function(event){
 
     infoAccount.classList.add('none');
     calendario.classList.add('none');
-    receta.classList.revome('none');
+    receta.classList.remove('none');
 });

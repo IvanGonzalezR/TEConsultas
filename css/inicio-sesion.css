@@ -32,3 +32,22 @@
   margin-bottom: 1rem;
   padding-left: 1rem;
 }
+
+.tipoUsuario > label{
+  color: #FFF;
+  margin-right: 1rem;
+}
+
+.tipoUsuario > input{
+  width: 20px;
+  height: 20px;
+  margin-right: 1rem;
+}
+
+.form > a{
+  height: 50px;
+}
+
+.container__rigth a{
+  margin-bottom: 1rem;
+}

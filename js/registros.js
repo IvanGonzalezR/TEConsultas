@@ -37,3 +37,28 @@ document.getElementById("paciente").addEventListener("click", function(event){
         inputs.removeChild(inpCedula);
     }
 });
+
+crearCuenta = document.getElementById("crearCuentaBtn");
+crearCuenta.addEventListener("click", function(event){
+    event.preventDefault();
+    let paciente = {};
+    // Obtener datos del formulario
+    if(true){
+        paciente.nombre = document.getElementById("nombre").value;
+        paciente.correo = document.getElementById("correo").value;
+        paciente.password = document.getElementById("contrasena").value;
+        console.log(paciente);
+        crearPaciente(paciente);
+    }
+});
+
+function crearPaciente(paciente){
+    const headers = {"Content-Type": "application/json",};
+    axios.post('http://localhost:3005/api/pacientes/registro', paciente, {headers})
+        .then(response => {
+            // const users = response.data.data;
+            // console.log(GET list users, users);
+            
+        })
+        .catch(error => console.error(error));
+}

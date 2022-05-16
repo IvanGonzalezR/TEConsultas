@@ -1,0 +1,76 @@
+.container_content{
+    position: absolute;
+    width: 95%;
+    height: 80vh;
+    padding: 1rem 60px;
+    z-index: 5;
+    top: 15%;
+    left: 2.5%;
+    justify-content: space-between;
+
+        /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.titulo{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.contenido,
+.contenido p{
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.info_contacto img{
+    width: 30%;
+    height: 30%;
+    margin: 20px 0 0 2rem;
+    border-radius: 1rem;
+}
+
+
+.container_content::-webkit-scrollbar {
+    width: 12px;               
+}
+  
+.container_content::-webkit-scrollbar-track {    
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem ;
+}
+  
+.container_content::-webkit-scrollbar-thumb {
+    background-color: #8b8b8b;    
+    border-radius: 20px;  
+}
+.icono{
+    align-items: center;
+}
+
+.icono img{
+    width: 55px;
+    margin: 0 1rem 0 0;
+}
+
+.icono p{
+    margin: 0;
+}
+
+
+/* BACKGROUND */
+.background {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    /*VER*/
+    z-index: 1;
+}

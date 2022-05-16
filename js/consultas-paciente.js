@@ -1,5 +1,9 @@
-//
+//Globales de Axios
+axios.defaults.withCredentials = true;
 
+//Obtener ID del usuario en sesion activa
+let idUsuario2 = localStorage.getItem("id");
+console.log(idUsuario2);
 
 let container_cons_rec = document.querySelector('.container_cons_rec');
 let confCuenta = document.getElementById('configuracion_cuenta');
@@ -26,7 +30,7 @@ iconCalendario.addEventListener('click', function() {
 btnGuardar = document.getElementById('btnGuardar');
 btnGuardar.addEventListener('click', function() {
       let paciente = {};
-      paciente.idPaciente = 1; //MODIFICAR Y EXTRAER DE LA SESION COOKIE
+      paciente.idPaciente = idUsuario2; //MODIFICAR Y EXTRAER DE LA SESION COOKIE
       paciente.celular = document.getElementById('celular').value;
       paciente.tipoSangre = document.getElementById('tipoSangre').value;
 
@@ -48,6 +52,7 @@ btnGuardar.addEventListener('click', function() {
             paciente.discapacidad = 0;
       }
 
+      console.log(paciente);
       crearPaciente(paciente);
 });
 

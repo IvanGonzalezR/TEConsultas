@@ -19,7 +19,8 @@ btnIniciarSesion.addEventListener("click", function(event){
 
 function iniciarSesionPaciente(usuario){
    const headers = {"Content-Type": "application/json",};
-    axios.post('http://localhost:3005/api/pacientes/login', usuario, {headers})
+   axios.defaults.withCredentials = true;
+   axios.post('http://localhost:3005/api/pacientes/login', usuario, {headers})
         .then(response => {
             console.log(response);
             setTimeout( function() { window.location.href = "./consultas-paciente.html"; }, 1000 );
@@ -32,7 +33,8 @@ function iniciarSesionPaciente(usuario){
 
 function iniciarSesionDoctor(usuario){
    const headers = {"Content-Type": "application/json",};
-    axios.post('http://localhost:3005/api/doctores/login', usuario, {headers})
+   axios.defaults.withCredentials = true;
+   axios.post('http://localhost:3005/api/doctores/login', usuario, {headers})
         .then(response => {
             console.log(response);
             setTimeout( function() { window.location.href = "./interfaz-medicos.html"; }, 1000 );

@@ -127,31 +127,28 @@
 
                     <!--Terminar informacion-->
 
-                    <div class="info-account flex ">
-                        <!-- <form action="/index.html" method="post" name="form" id="formId"> -->
-                            <p>Informacion de la cuenta</p>
+                    <div class="info-account flex">
+                        <p>Informacion de la cuenta</p>
 
-                            <img src="/recursos/img/image 3.png" alt="imagen perfil">
+                        <img src="/recursos/img/image 3.png" alt="imagen perfil">
 
-                            <p class="foto-perfil" id="imgPerfil">Foto de perfil: <input type="file"></p>
+                        <p class="foto-perfil" id="imgPerfil">Foto de perfil: <input type="file"></p>
+                        
+                        <input type="text" placeholder="NOMBRE COMPLETO" name="nombre" id="nombre">
+                        
+                        <p>Fecha de nacimiento: <input type="date" name="nacimiento" id="nacimiento" value="1995-01-01"></p>
+                        <p>Sexo: M <input type="radio" name="sexo" id="sexo" value="M" checked> F <input type="radio" name="sexo" id="sexo" value="F"></p>
+                        <input type="text" placeholder="CEDULA" name="cedula" id="cedula">
+                        <p class="foto-identificacion" id="identificacion">Identificación: <input type="file"></p>
+                        <p class="foto-firma" id="firma">Firma digitalizada: <input type="file"></p>
+                        <input type="text" placeholder="DIRECCION CONSULTORIO" name="consultorio" id="consultorio">
+                        <input type="text" placeholder="ESPECIALIDAD" name="especialidad" id="especialidad">
+                        <div class="textArea"><textarea placeholder="HABLA SOBRE TI..." name="descripcion" id="descripcion" cols="30" rows="10"></textarea></div>
+                        <input type="number" placeholder="PRECIO POR CONSULTA" name="precio" id="precio">
+                        <p>Horario consulta: De <input placeholder="10" type="number" name="" id="hora1" required> a <input placeholder="18" type="number" name="" id="hora2" required></p>
+                        <p>Dias semana: <input class="dia-semana" placeholder="Lunes" type="text" name="" id="dia1" required> a <input class="dia-semana" placeholder="Sabado" type="text" name="" id="dia2" required></p>
+                        <div class="btnUser flex" id="btnGuardar"><a href="">GUARDAR</a></div>
                             
-                            <input type="text" placeholder="NOMBRE COMPLETO" name="nombre" id="nombre">
-                            
-                            <p>Fecha de nacimiento: <input type="date" name="nacimiento" id="nacimiento" value="1995-01-01"></p>
-                            <p>Sexo: M <input type="radio" name="sexo" id="sexo" value="M" checked> F <input type="radio" name="sexo" id="sexo" value="F"></p>
-                            <input type="text" placeholder="CEDULA" name="cedula" id="cedula">
-                            <p class="foto-identificacion" id="identificacion">Identificación: <input type="file"></p>
-                            <p class="foto-firma" id="firma">Firma digitalizada: <input type="file"></p>
-                            <input type="text" placeholder="DIRECCION CONSULTORIO" name="consultorio" id="consultorio">
-                            <input type="text" placeholder="ESPECIALIDAD" name="especialidad" id="especialidad">
-                            <div class="textArea"><textarea placeholder="HABLA SOBRE TI..." name="descripcion" id="descripcion" cols="30" rows="10"></textarea></div>
-                            <input type="number" placeholder="PRECIO POR CONSULTA" name="precio" id="precio">
-                            <p>Horario consulta: De <input placeholder="10" type="number" name="" id="hora1" required> a <input placeholder="18" type="number" name="" id="hora2" required></p>
-                            <p>Dias semana: <input class="dia-semana" placeholder="Lunes" type="text" name="" id="dia1" required> a <input class="dia-semana" placeholder="Sabado" type="text" name="" id="dia2" required></p>
-                            
-                            
-                        <!-- </form> -->
-                        <button class="btnUser flex" id="btnGuardar" type="submit"><a href="">GUARDAR</a></button>
                     </div>
                     <!------------------------------------------->
 

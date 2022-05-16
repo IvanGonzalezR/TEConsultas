@@ -250,6 +250,11 @@
     flex-direction: column;
 }
 
+#idSexo > input{
+    width: 1rem;
+    height: 1rem;
+}
+
 .informacion_paciente > p{
     font-size: 30px;
     font-weight: bold;

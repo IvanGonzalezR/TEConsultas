@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/consultas-paciente.css" />
+    <link rel="stylesheet" href="css/consultas-paciente.css"/>
     <link rel="stylesheet" href="css/calendar.css">
     <script src="js/consultas-paciente.js" defer></script>
+    <script src="js/consultas-paciente2.js" defer></script>
     <!-- Cargamos nuestras fontsa-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,7 +34,7 @@
                 <a href="index.html"><img src="./recursos/img/logo.png" alt="logo"></a>
                 <nav>
                     <a href="index.html">Inicio</a>
-                    <a href="registros.html">Cerrar sesion</a>
+                    <a href="registros.html" id="cerrarSesion">Cerrar sesion</a>
                 </nav>
             </div>
         </div>
@@ -128,12 +129,12 @@
                             <div class="inputs flex column centerX">
                                 <input type="text" placeholder="1" readonly="true" id="idPaciente"/>
                                 <input type="text" placeholder="Jesús López" readonly="true" />
-                                <input type="tel" placeholder="8712397966" id="celular" />
+                                <input type="tel" value="8712397966" id="celular" />
                                 <input type="text" name="correo" id="correo" placeholder="jesuslopez19@gmail.com" readonly="true"/>
-                                <input type="text" name="direccion" id="direccion" placeholder="Col. Centro #345,  Gomez Palacio" readonly="true"/>
-                                <input type="date" name="fecha" id="fechaNac" value="1999-10-24" min="1900-01-01" max="2022-01-01" readonly="true"/>
-                                <input type="text" name="sexo" placeholder="Masculino" readonly="true" id="sexo"/>
-                                <input type="text" name="discapacidad" id="discapacidad" placeholder="Ninguna" readonly="true"/>
+                                <input type="text" name="direccion" id="direccion" value="Col. Centro #345,  Gomez Palacio"/>
+                                <input type="date" name="fecha" id="fechaNac" placeholder="1999-10-24" min="1900-01-01" max="2022-01-01" readonly="true"/>
+                                <p id="idSexo">Sexo: M <input type="radio" name="sexo" id="sexo1" value="M" checked> F <input type="radio" name="sexo" id="sexo2" value="F"></p>
+                                <p id="idSexo">Discapacidad: Si <input type="radio" name="discapacidad" id="discapacidad" value="Si"> No <input type="radio" name="discapacidad" id="discapacidad" value="No" checked></p>
                                 <input type="text" name="tipo_sangre" id="tipoSangre" placeholder="B+" readonly="true"/>
                                 <input type="file" name="foto" id="foto" />
                             </div>
@@ -141,13 +142,7 @@
 
                         <button class="btn-guardar" id="btnGuardar"> GUARDAR</button>
                     </div>
-
-                        
-                    
-                    
-
-                    
-                    
+              
                 </div>
                 
             </div>

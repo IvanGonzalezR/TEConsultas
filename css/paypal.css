@@ -14,8 +14,8 @@ input{
 }
 
 .container_paypal{
-    margin: 2rem 25%;
-    width: 50%;
+    margin: 2rem auto;
+    width: 700px;
 }
 
 .titulo{

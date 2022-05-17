@@ -42,7 +42,7 @@
             <div class="container-main flex">
                 <div class="menu-container-main flex">
                     <div class="info-paciente flex">
-                        <img src="/recursos/img/image 3.png" alt="pp-paciente">
+                        <img src="/recursos/img/imgPaciente.jpg" alt="pp-paciente">
                         <p>Jesús López</p>
                         <p id="correo">jesuslopez19@gmail.com</p>
                     </div>
@@ -69,7 +69,7 @@
                 </div>
 
                 <div class="container-item flex">
-                    <div class="container_cons_rec flex">
+                    <div class="container_cons_rec flex none">
                         <div class="container_consultas">
                             <p>CONSULTAS</p>
                             <div class="consultas flex">
@@ -108,7 +108,7 @@
                     </div>
 
                     
-                    <div class="informacion_paciente flex none"id="configuracion_cuenta">
+                    <div class="informacion_paciente flex"id="configuracion_cuenta">
                         <p>Configuracion de la cuenta</p>
 
                         <form class="form_paciente flex row" id="form_cuenta">
@@ -121,18 +121,18 @@
                                 <span>Sexo</span>
                                 <span>Discapacidad</span>
                                 <span>Tipo de sangre</span>
-                                <span>Subir foto del perfil</span>
+                                <span id="fotoSpan">Subir foto del perfil</span>
                             </div>
 
                             <div class="inputs flex column centerX">
                                 <input type="text" value="Jesús López" readonly="true" />
-                                <input type="tel" value="8712397966" id="celular" />
+                                <input type="tel" placeholder="8712397966" id="celular" />
                                 <input type="text" name="correo" id="correo" value="jesuslopez19@gmail.com" readonly="true"/>
-                                <input type="text" name="direccion" id="direccion" value="Col. Centro #345,  Gomez Palacio" readonly="true"/>
-                                <input type="date" name="fecha" id="fechaNac" value="1999-10-24" min="1900-01-01" max="2022-01-01" readonly="true"/>
+                                <input type="text" name="direccion" id="direccion" placeholder="Col. Centro #345,  Gomez Palacio"/>
+                                <input type="date" name="nacimiento" id="fechaNac" value="1995-01-01">
                                 <p id="idSexo">Sexo: M <input type="radio" name="sexo" id="sexo1" value="M" checked> F <input type="radio" name="sexo" id="sexo2" value="F"></p>
                                 <p id="idSexo">Discapacidad: Si <input type="radio" name="discapacidad" id="discapacidad" value="Si"> No <input type="radio" name="discapacidad" id="discapacidad" value="No" checked></p>
-                                <input type="text" name="tipo_sangre" id="tipoSangre" value="B+" readonly="true"/>
+                                <input type="text" name="tipo_sangre" id="tipoSangre" placeholder="B+" />
                                 <input type="file" name="foto" id="foto" />
                             </div>
                         </form>

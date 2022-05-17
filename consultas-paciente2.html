@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/consultas-paciente.css"/>
     <link rel="stylesheet" href="css/calendar.css">
-    <script src="js/consultas-paciente.js" defer></script>
-    <script src="js/consultas-paciente2.js" defer></script>
+    
     <!-- Cargamos nuestras fontsa-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,7 +42,7 @@
             <div class="container-main flex">
                 <div class="menu-container-main flex">
                     <div class="info-paciente flex">
-                        <img src="/recursos/img/image 3.png" alt="pp-paciente">
+                        <img src="/recursos/img/image 3.png" alt="pp-paciente" id="fotoPerfil">
                         <p>Jesús López</p>
                         <p id="correo">jesuslopez19@gmail.com</p>
                     </div>
@@ -70,7 +69,7 @@
                 </div>
 
                 <div class="container-item flex">
-                    <div class="container_cons_rec flex">
+                    <div class="container_cons_rec flex none">
                         <div class="container_consultas">
                             <p>CONSULTAS</p>
                             <div class="consultas flex">
@@ -109,7 +108,7 @@
                     </div>
 
                     
-                    <div class="informacion_paciente flex none"id="configuracion_cuenta">
+                    <div class="informacion_paciente flex "id="configuracion_cuenta">
                         <p>Configuracion de la cuenta</p>
 
                         <form class="form_paciente flex row" id="form_cuenta">
@@ -127,16 +126,16 @@
                             </div>
 
                             <div class="inputs flex column centerX">
-                                <input type="text" placeholder="1" readonly="true" id="idPaciente"/>
-                                <input type="text" placeholder="Jesús López" readonly="true" />
-                                <input type="tel" value="8712397966" id="celular" />
-                                <input type="text" name="correo" id="correo" placeholder="jesuslopez19@gmail.com" readonly="true"/>
-                                <input type="text" name="direccion" id="direccion" value="Col. Centro #345,  Gomez Palacio"/>
-                                <input type="date" name="fecha" id="fechaNac" placeholder="1999-10-24" min="1900-01-01" max="2022-01-01" readonly="true"/>
-                                <p id="idSexo">Sexo: M <input type="radio" name="sexo" id="sexo1" value="M" checked> F <input type="radio" name="sexo" id="sexo2" value="F"></p>
-                                <p id="idSexo">Discapacidad: Si <input type="radio" name="discapacidad" id="discapacidad" value="Si"> No <input type="radio" name="discapacidad" id="discapacidad" value="No" checked></p>
-                                <input type="text" name="tipo_sangre" id="tipoSangre" placeholder="B+" readonly="true"/>
-                                <input type="file" name="foto" id="foto" />
+                                <input type="text" placeholder="1" readonly="true" id="idPaciente2"/>
+                                <input type="text" placeholder="Jesús López" readonly="true" id="nombre2"/>
+                                <input type="tel" value="8712397966" id="celular2" />
+                                <input type="text" name="correo" id="correo2" placeholder="jesuslopez19@gmail.com" readonly="true"/>
+                                <input type="text" name="direccion" id="direccion2" value="Col. Centro #345,  Gomez Palacio"/>
+                                <input type="date" name="fecha" id="fechaNac2" placeholder="1999-10-24" min="1900-01-01" max="2022-01-01" readonly="true"/>
+                                <p id="idSexo">Sexo: M <input type="radio" name="sexo" id="sexo12" value="M" checked> F <input type="radio" name="sexo" id="sexo22" value="F"></p>
+                                <p id="idSexo">Discapacidad: Si <input type="radio" name="discapacidad" id="discapacidad2" value="Si"> No <input type="radio" name="discapacidad" id="discapacidad2" value="No" checked></p>
+                                <input type="text" name="tipo_sangre" id="tipoSangre2" placeholder="B+" readonly="true"/>
+                                <input type="file" name="foto" id="foto2" />
                             </div>
                         </form>
 
@@ -156,5 +155,7 @@
     </div>
     
     <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+    <!-- <script src="js/consultas-paciente.js" defer></script> -->
+    <script src="js/consultas-paciente2.js" defer></script>
 </body>
 </html>

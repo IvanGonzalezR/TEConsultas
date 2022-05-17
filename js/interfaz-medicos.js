@@ -1,6 +1,10 @@
 //Globales de Axios
 axios.defaults.withCredentials = true;
 
+//Obtener ID del usuario en sesion activa
+let idUsuario = localStorage.getItem("id");
+console.log(idUsuario);
+
 let calendario = document.querySelector('.calendario');
 let infoAccount = document.querySelector('.info-account');
 let receta = document.querySelector('.receta');
@@ -10,6 +14,7 @@ let iconAccount = document.getElementById('iconAccount');
 let iconCalendario = document.getElementById('iconCalendario');
 let iconReceta = document.getElementById('iconReceta');
 let btnGuardar = document.getElementById('btnGuardar');
+let doctor = {};
 
 //Boton Cuentaa
 iconAccount.addEventListener('click', function(event){
@@ -40,13 +45,9 @@ iconReceta.addEventListener('click', function(event){
 
 btnGuardar.addEventListener('click', function(event){
     event.preventDefault();
-    let doctor = {}
-    doctor.idDoctor = 1; //MODIFICAR Y EXTRAER DE LA SESION COOKIE
+    
+    doctor.idDoctor = idUsuario; //MODIFICAR Y EXTRAER DE LA SESION COOKIE
     doctor.nombreC = document.getElementById('nombre').value;
-
-    doctor.identificacion = "ImgIdentificacion";
-
-    doctor.firma = "ImgFirma";
 
     let radioSeleccionado = document.querySelector('input[name="sexo"]:checked');
       if(radioSeleccionado.value == "F"){
@@ -56,8 +57,6 @@ btnGuardar.addEventListener('click', function(event){
     }
     
     doctor.fechaNac = document.getElementById('nacimiento').value;
-
-    doctor.foto = "ImgFoto";
 
     doctor.especialidad = document.getElementById('especialidad').value;
 
@@ -76,6 +75,8 @@ function crearDoctor(doctor){
     axios.post('http://localhost:3005/api/infodoctores', doctor, {headers})
         .then(response => {
             alert("Informacion completa del doctor");
+            localStorage.removeItem("primeraVez");
+            localStorage.setItem("primeraVez", "false");
             setTimeout( function() { window.location.href = "/interfaz-medicos2.html"; }, 1000 );
         })
         .catch(error => {console.error(error)
@@ -111,13 +112,37 @@ function manejarImagenes(evt) {
       })(f); 
 
       // Read in the image file as a data URL.
-      console.log(reader.readAsDataURL(f));
       console.log(f.name);
-      console.log(evt);
+
+      if(idCampo == "identificacion"){
+        doctor.identificacion = f.name;
+      }else if(idCampo == "firma"){
+        doctor.firma = f.name;
+      }else if(idCampo == "imgPerfil"){
+        doctor.foto = f.name;
+      }
+      
+
+      console.log("identificacion = " + doctor.identificacion);
+      console.log("firma = " + doctor.firma);
+      console.log("foto = " + doctor.foto);
     }
   }
 
-  //Asignar evento a los campos que cargan imagenes
+  //Cerrar sesion
+cerrarSesion = document.getElementById('cerrarSesion');
+cerrarSesion.addEventListener('click', function() {
+   localStorage.removeItem("id");
+   localStorage.removeItem("primeraVez");
+   axios.get("http://localhost:3005/api/doctores")
+   .then(response => {
+         console.log(response);
+      })
+      .catch(error => {console.error(error)
+      });
+});
+
+  //Asignar evento a los campos que cargan imageness
   let identificacion = document.getElementById('identificacion');
   identificacion.addEventListener('change', manejarImagenes);
 

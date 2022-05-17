@@ -1,0 +1,118 @@
+input::-webkit-input-placeholder {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+}
+
+input{
+    font-size: 16px;
+    height: 50px;
+    font-family: "Poppins", sans-serif;
+    border-color: #8d8d8d;
+    border-style: solid;
+    margin-bottom: 1rem;
+    border-radius: .3rem;
+}
+
+.container_paypal{
+    margin: 2rem 25%;
+    width: 50%;
+}
+
+.titulo{
+    font-size: 40px;
+    margin-bottom: 3rem;
+}
+
+.header_paypal{
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: #8d8d8d;
+}
+
+.info_precio{
+    padding-top: 1rem;
+}
+
+.info_precio p, span{
+    font-size: 30px;
+}
+
+.info_precio img{
+    margin-right: 1rem;
+    width: 30px;
+    height: 30px;
+}
+
+.nombre_personal{
+    height: 70px;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: #8d8d8d;
+}
+
+.nombre_personal p{
+    line-height: 70px;
+}
+
+.main_paypal > p{
+    font-size: 22px;
+    margin-bottom: 1rem;
+}
+
+.main_paypal{
+    padding: 0 1rem;
+}
+
+.form_paypal{
+    flex-direction: column;
+}
+
+.info_personal{
+    justify-content: space-between;
+}
+
+.info_personal input{
+    width: 49%;
+}
+
+.form_paypal select{
+    height: 50px;
+    border-radius: .3rem;
+    font-family: "Poppins", sans-serif;
+    border-color: #8d8d8d;
+    margin-bottom: 1rem;
+}
+
+.validacion_tarjeta{
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: #8d8d8d;
+}
+
+.validacion_tarjeta input{
+    width: 49%;
+}
+
+
+
+.form_paypal input[type=submit]{
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    background-color: #0070ba;
+    border-radius: 1.5rem;
+    border: none;
+}
+
+.form_paypal input[type=submit]:hover{
+    background-color: #003087;
+}
+

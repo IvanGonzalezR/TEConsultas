@@ -69,6 +69,7 @@ function crearPaciente(paciente){
         .then(response => {
             console.log(response);
             alert("Usuario registrado con exito");
+            localStorage.setItem("primeraVez", "true");
             setTimeout( function() { window.location.href = "./login.html"; }, 1000 );
         })
         .catch(error => {console.error(error)
@@ -83,6 +84,7 @@ function crearDoctor(doctor){
         .then(response => {
             console.log(response);
             alert("Doctor registrado con exito");
+            localStorage.setItem("primeraVez", "true");
             setTimeout( function() { window.location.href = "./login.html"; }, 1000 );
         })
         .catch(error => {console.error(error)

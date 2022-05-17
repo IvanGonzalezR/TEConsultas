@@ -11,6 +11,10 @@ let confCuenta = document.getElementById('configuracion_cuenta');
 
 let iconAccount = document.getElementById('iconAccount');
 let iconCalendario = document.getElementById('iconCalendario');
+var paciente = {};
+let foto;
+let foto2 = document.getElementById('foto');
+foto2.addEventListener('change', manejarImagenes);
 
 // esconder el Div de consultas
 iconAccount.addEventListener('click', function() {
@@ -26,13 +30,50 @@ iconCalendario.addEventListener('click', function() {
       //confCuentaHijo.classList.add('none');
 });
 
+function manejarImagenes(evt) {
+    var files = evt.target.files; // FileList object
+    idCampo = evt.currentTarget.id
+    console.log(idCampo + " ESte es el id");
+
+    // Loop through the FileList and render image files as thumbnails.
+    for (var i = 0, f; f = files[i]; i++) {
+
+      // Only process image files.
+      if (!f.type.match('image.*')) {
+        continue;
+      }
+
+      var reader = new FileReader();
+
+      // Closure to capture the file information.
+      reader.onload = (function(theFile) {
+        return function(e) {
+          // Render thumbnail.
+          var div = document.createElement('div');
+          div.classList.add('centrarImagen');
+          div.innerHTML = ['<img class="thumb centerX centerY" width="110rem" height="110rem" src="', e.target.result,
+                            '" title="', escape(theFile.name), '"/>'].join('');
+          document.getElementById("fotoSpan").insertBefore(div, null);
+        };
+      })(f); 
+
+      // Read in the image file as a data URL.
+      // console.log(reader.readAsDataURL(f));
+      paciente.foto = f.name;
+      console.log(evt);
+    }
+  }
+
+      
+
 //agregar evento click del boton Guardar
 btnGuardar = document.getElementById('btnGuardar');
 btnGuardar.addEventListener('click', function() {
-      let paciente = {};
+      
       paciente.idPaciente = idUsuario2; //MODIFICAR Y EXTRAER DE LA SESION COOKIE
-      paciente.celular = document.getElementById('celular').value;
       paciente.tipoSangre = document.getElementById('tipoSangre').value;
+      paciente.celular = document.getElementById('celular').value;
+      
 
       let radioSeleccionado = document.querySelector('input[name="sexo"]:checked');
       if(radioSeleccionado.value == "F"){
@@ -42,7 +83,7 @@ btnGuardar.addEventListener('click', function() {
       }
 
       paciente.fechaNac = document.getElementById('fechaNac').value;
-      paciente.foto = "ImgFoto";
+
       paciente.direccion = document.getElementById('direccion').value;
 
       let radioSeleccionado2 = document.querySelector('input[name="discapacidad"]:checked');
@@ -61,10 +102,14 @@ function crearPaciente(paciente){
     axios.post('http://localhost:3005/api/infopacientes', paciente, {headers})
         .then(response => {
             alert("Informacion completa del Paciente");
-            setTimeout( function() { window.location.href = "/consultas-paciente2.html"; }, 1000 );
+            localStorage.removeItem("primeraVez");
+            localStorage.setItem("primeraVez", "false");
+            setTimeout( function() { window.location.href = "./consultas-paciente2.html"; }, 1000 );
         })
         .catch(error => {console.error(error)
         if (error.response.status === 401){
             // alert("El correo ya esta registrado");
         }});
 }
+
+

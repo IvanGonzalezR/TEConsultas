@@ -24,7 +24,12 @@ function iniciarSesionPaciente(usuario){
         .then(response => {
             console.log(response);
             localStorage.setItem("id", response.data.id);
+            if(localStorage.getItem("primeraVez") == "true"){
+                setTimeout( function() { window.location.href = "./consultas-paciente.html"; }, 1000 );
+            }else{
             setTimeout( function() { window.location.href = "./consultas-paciente2.html"; }, 1000 );
+            }
+
         })
         .catch(error => {console.error(error)
         if (error.response.status === 401){
@@ -41,7 +46,11 @@ function iniciarSesionDoctor(usuario){
         .then(response => {
             console.log(response);
             localStorage.setItem("id", response.data.id);
+            if(localStorage.getItem("primeraVez") == "true"){
+                setTimeout( function() { window.location.href = "./interfaz-medicos.html"; }, 1000 );
+            }else{
             setTimeout( function() { window.location.href = "./interfaz-medicos2.html"; }, 1000 );
+            }
         })
         .catch(error => {console.error(error)
         if (error.response.status === 401){

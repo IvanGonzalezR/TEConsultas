@@ -38,72 +38,26 @@
             <div class="doctores">
                 <p>DOCTORES</p>
                 <div class="menu-doctores flex" id="menuDoctores">
-                    <!-- <div class="carta-doctor flex">
-                        <img src="/recursos/img/image 3.png" alt="doctor">
-                        <div class="info-carta-doctor flex">
-                            <p>Juan Manuel Alfaro Aguilera</p>
-                            <p>Ginecologo</p>
-                            <p>Precio consulta: <span>$150.00</span></p>
-                            <button class="btn-ver-mas" >Ver más</button>
-                        </div>
-                    </div>
 
-                    <div class="carta-doctor flex">
-                        <img src="/recursos/img/image 3.png" alt="doctor">
-                        <div class="info-carta-doctor flex">
-                            <p>Juan Manuel Alfaro Aguilera</p>
-                            <p>Ginecologo</p>
-                            <p>Precio consulta: <span>$150.00</span></p>
-                            <button class="btn-ver-mas" >Ver más</button>
-                        </div>
-                    </div>
+                    <!-- AQUI SE CREAN LAS TARJETAS DINAMICAS -->
 
-                    <div class="carta-doctor flex">
-                        <img src="/recursos/img/image 3.png" alt="doctor">
-                        <div class="info-carta-doctor flex">
-                            <p>Juan Manuel Alfaro Aguilera</p>
-                            <p>Ginecologo</p>
-                            <p>Precio consulta: <span>$150.00</span></p>
-                            <button class="btn-ver-mas" >Ver más</button>
-                        </div>
-                    </div>
-
-                    <div class="carta-doctor flex">
-                        <img src="/recursos/img/image 3.png" alt="doctor">
-                        <div class="info-carta-doctor flex">
-                            <p>Juan Manuel Alfaro Aguilera</p>
-                            <p>Ginecologo</p>
-                            <p>Precio consulta: <span>$150.00</span></p>
-                            <button class="btn-ver-mas" >Ver más</button>
-                        </div>
-                    </div> -->
-
-                    <div class="carta-doctor flex">
-                        <img src="/recursos/img/image 3.png" alt="doctor">
-                        <div class="info-carta-doctor flex">
-                            <p>Juan Manuel Alfaro Aguilera</p>
-                            <p>Ginecologo</p>
-                            <p>Precio consulta: <span>$150.00</span></p>
-                            <button class="btn-ver-mas" >Ver más</button>
-                        </div>
-                    </div>
                 </div>
             </div>
 
             <div class="info-doctores">
                 <p>INFORMACIÓN</p>
                 <div class="info-completa flex">
-                    <img src="/recursos/img/image 3.png" alt="doctor">
-                    <p class="titulo">Juan Manuel Alfaro Aguilera</p>
-                    <p>Ginecologo</p>
-                    <p>Descripcion: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dicta inventore labore adipisci nihil laudantium similique ipsa asperiores quasi minima.</p>
+                    <img src="/recursos/img/image 3.png" alt="doctor" id="derechaFoto">
+                    <p class="titulo" id="derechaNombre">Juan Manuel Alfaro Aguilera</p>
+                    <p id="derechaEspecialidad">Ginecologo</p>
+                    <p id="derechaDescripcion">Descripcion: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dicta inventore labore adipisci nihil laudantium similique ipsa asperiores quasi minima.</p>
                     <div class="ag-cita">
                         <p class="titulo">Agendar cita</p>
-                        <p>Precio consulta: <span>$150.00</span></p>
-                        <p>Fecha: <input type="date" class="form-control form-control-sm" id="FechaActual"></p>
+                        <p>Precio consulta: <span id="derechaPrecio">$150.00</span></p>
+                        <p>Fecha: <input type="date" class="form-control form-control-sm" id="derechaFecha" value="2022-05-17"></p>
                         <p>Horario:</p>
-                        <div class="horarios-citas flex">
-                            <button class="btn-horarios-citas seleccionado" >10:00</button>
+                        <div class="horarios-citas flex" id="derechaHorarios">
+                            <button class="btn-horarios-citas" >10:00</button>
                             <button class="btn-horarios-citas" >12:00</button>
                             <button class="btn-horarios-citas" >14:00</button>
                             <button class="btn-horarios-citas" >16:00</button>
@@ -125,7 +79,7 @@
 
     <script>
         var fecha = new Date();
-        document.getElementById("FechaActual").value = fecha.toJSON().slice(0,10);
+        document.getElementById("derechaFecha").value = fecha.toJSON().slice(0,10);
     </script>
 
 

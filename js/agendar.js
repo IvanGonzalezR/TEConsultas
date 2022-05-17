@@ -9,13 +9,21 @@ console.log(idUsuario);
 //Variables Globales
 const headers = {"Content-Type": "application/json",};
 let idDoctor = 12;
-let derechaFecha = document.getElementById('FechaActual').value;
+let derechaFoto = document.getElementById('derechaFoto');
+let derechaNombre = document.getElementById('derechaNombre');
+let derechaEspecialidad = document.getElementById('derechaEspecialidad');
+let derechaDescripcion = document.getElementById('derechaDescripcion');
+let derechaPrecio = document.getElementById('derechaPrecio');
+let derechaFecha = document.getElementById('derechaFecha').value;
+let derechaHorarios = document.getElementById('derechaHorarios');
 var todosDoctores = [];
 var todosinfoDoctores = {};
 
 // let derechaHora = document.getElementById('HoraActual');
 let derechaHora = "12";
 let consulta = {};
+let horarioInicial = [];
+let horarioFinal = [];
 
 // ACTUALIZAR CON ON CHANGE
 consulta.idDoctor = idDoctor;
@@ -90,6 +98,7 @@ function getAllInfoDoctores(){
             i++;
             document.getElementById("menuDoctores").insertBefore(div, null);  
 
+            generarDatos();
          });
 
       })
@@ -99,32 +108,53 @@ function getAllInfoDoctores(){
       }});
 }
 getAllInfoDoctores();
+let btnHorarios = {};
+function generarDatos(){
+      let btnVerMas = document.getElementsByClassName('btn-ver-mas');
+      for (let i = 0; i < btnVerMas.length; i++) {
+            btnVerMas[i].addEventListener('click', function(){
 
-      // <div class="carta-doctor flex">
-      //                   <img src="/recursos/img/image 3.png" alt="doctor">
-      //                   <div class="info-carta-doctor flex">
-      //                       <p>Juan Manuel Alfaro Aguilera</p>
-      //                       <p>Ginecologo</p>
-      //                       <p>Precio consulta: <span>$150.00</span></p>
-      //                       <button class="btn-ver-mas" >Ver más</button>
-      //                   </div>
-      //               </div>
-      // console.log('Aqui entra al forEach');
-      // console.log(todosinfoDoctores);
-      // console.log(todosinfoDoctores);
-      // todosinfoDoctores[0].data.data.forEach(element => {
-      //       console.log(element + "1");
-            // let div = document.createElement('div');
-            // div.classList.add('carta-doctor');
-            // div.classList.add('flex');
-            // div.innerHTML = ['src="/recursos/pruebas/doctores/' + 'perfilimage 3.png' + '"' + 'alt="doctor"'];
-            // document.getElementById("menuDoctores").insertBefore(div, null);  
-      // };     
+                  //eliminar botones de horarios
+                  
+                  btnHorarios = document.getElementsByClassName('btn-horarios-citas');
+                  for (let j = 0; j < btnHorarios.length; j++) {
+                        btnHorarios[j].classList.add('none');
+                  }
 
-      // let a = todosinfoDoctores[0].data.map(element => {
-      //       element.data.data.idDoctor; 
-      // });
+                  let idDoctor = btnVerMas[i].id;
+                  console.log(idDoctor);
 
-      // console.log(a);
+                  derechaFoto.src = "/recursos/pruebas/doctores/perfil/" + todosinfoDoctores.data[i].foto;
+                  derechaNombre.textContent = todosDoctores[0]['data']['data'][i].nombre;
+                  derechaEspecialidad.textContent = todosinfoDoctores.data[i].especialidad;
+                  derechaDescripcion.textContent = "Descripción: " + todosinfoDoctores.data[i].Descripcion;
+                  derechaPrecio.textContent = "$" + todosinfoDoctores.data[i].precioCons;
+                  // derechaFecha.value = ;
+
+                   //Obtener los horarios disponibles
+
+                  horarioInicial = [];
+                  horarioFinal = [];
+                  horarioInicial.push(todosinfoDoctores.data[i].horario.split("/")[2]);
+                  horarioFinal.push(todosinfoDoctores.data[i].horario.split("/")[3]);
+
+                  for (let h = horarioInicial; h <= horarioFinal; h++) {
+                        //Crear nuevos botones
+                        
+                        let button = document.createElement('button');
+                        button.classList.add('btn-horarios-citas'); 
+                        button.textContent = h + ":00";
+                        document.getElementById("derechaHorarios").insertBefore(button, null); 
+                  }
+
+                  console.log("Horario inicial: " + horarioInicial);
+                  console.log("Horario Final: " + horarioFinal);
+
+                  //delete buttons
+                  
+            });
+      }
+      
+}
 
 

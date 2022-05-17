@@ -204,3 +204,6 @@ span{
     position: fixed;
     z-index: 1;
 }
+.none{
+    display: none;
+}

@@ -32,7 +32,7 @@
                 <a href="index.html"><img src="./recursos/img/logo.png" alt="logo"></a>
                 <nav>
                     <a href="index.html">Inicio</a>
-                    <a href="registros.html">Cerrar sesion</a>
+                    <a href="registros.html" id="cerrarSesion">Cerrar sesion</a>
                 </nav>
             </div>
         </div>
@@ -128,21 +128,19 @@
                     <!--Terminar informacion-->
 
                     <div class="info-account flex">
-                        <p>Informacion de la cuenta</p>
+                        <p>Información de la cuenta</p>
 
-                        <img src="/recursos/img/image 3.png" alt="imagen perfil">
+                        <img src="/recursos/img/image 3.png" id="foto2" alt="imagen perfil" height="220" width="220">
 
-                        <p class="foto-perfil" id="imgPerfil">Foto de perfil: <input type="file"></p>
+                        <p class="foto-perfil" id="imgPerfil2">Foto de perfil: <input type="file"></p>
                         
-                        <input type="text" placeholder="NOMBRE COMPLETO" name="nombre" id="nombre">
+                        <input type="text" placeholder="NOMBRE COMPLETO" name="nombre" id="nombre2" readonly>
                         
-                        <p>Fecha de nacimiento: <input type="date" name="nacimiento" id="nacimiento2" value="1995-01-01"></p>
-                        <p>Sexo: M <input type="radio" name="sexo" id="sexo2" value="M" checked> F <input type="radio" name="sexo" id="sexo" value="F"></p>
-                        <input type="text" placeholder="CEDULA" name="cedula" id="cedula2">
-                        <p class="foto-identificacion" id="identificacion2">Identificación: <input type="file"></p>
-                        <p class="foto-firma" id="firma2">Firma digitalizada: <input type="file"></p>
+                        <p>Fecha de nacimiento: <input type="date" name="nacimiento" id="nacimiento2" readonly value="1995-01-01"></p>
+                        <p>Sexo: M <input type="radio" name="sexo" id="sexo2" value="M" checked disabled> F <input type="radio" name="sexo" id="sexo22" value="F" disabled></p>
+                        <input type="text" placeholder="CEDULA" name="cedula" id="cedula2" readonly>
                         <input type="text" placeholder="DIRECCION CONSULTORIO" name="consultorio" id="consultorio2">
-                        <input type="text" placeholder="ESPECIALIDAD" name="especialidad" id="especialidad2">
+                        <input type="text" placeholder="ESPECIALIDAD" name="especialidad" id="especialidad2" readonly>
                         <div class="textArea"><textarea placeholder="HABLA SOBRE TI..." name="descripcion" id="descripcion2" cols="30" rows="10"></textarea></div>
                         <input type="number" placeholder="PRECIO POR CONSULTA" name="precio" id="precio2">
                         <p>Horario consulta: De <input placeholder="10" type="number" name="" id="hora12" required> a <input placeholder="18" type="number" name="" id="hora22" required></p>

@@ -9,9 +9,15 @@ let container_cons_rec = document.querySelector('.container_cons_rec');
 let confCuenta = document.getElementById('configuracion_cuenta');
 //let confCuentaHijo = document.getElementById('configuracion_cuenta_hijo');
 
+let inputNombre = document.getElementById('nombre');
+let inputNombreLeft = document.getElementById('nombreLeft');
+let inputCorreo = document.getElementById('correo');
+let inputCorreoLeft = document.getElementById('correoLeft');
+
 let iconAccount = document.getElementById('iconAccount');
 let iconCalendario = document.getElementById('iconCalendario');
-var paciente = {};
+let paciente = {};
+let paciente2 = {idPaciente: idUsuario2};
 let foto;
 let foto2 = document.getElementById('foto');
 foto2.addEventListener('change', manejarImagenes);
@@ -64,8 +70,27 @@ function manejarImagenes(evt) {
     }
   }
 
-      
+function getPacientes(){
+   const headers2 = {"Content-Type": "application/json",};
+   axios.post("http://localhost:3005/api/pacientes/nombre", paciente2, {headers2})
+      .then(response => {
+         datosUsuarioNombre = response;
+         console.log("DatosUsuarioNombre >");
+         console.log(datosUsuarioNombre);
 
+         inputNombre.value = datosUsuarioNombre.data.nombre;
+         inputNombreLeft.textContent = datosUsuarioNombre.data.nombre;
+         inputCorreo.value = datosUsuarioNombre.data.correo;
+         inputCorreoLeft.textContent = datosUsuarioNombre.data.correo;
+      //    actualizarPacientes(datosUsuarioNombre); 
+
+      })
+      .catch(error => {console.error(error)
+      if (error.response.status === 401){
+         // alert("El correo ya esta registrado");
+      }});
+}
+getPacientes();
 //agregar evento click del boton Guardar
 btnGuardar = document.getElementById('btnGuardar');
 btnGuardar.addEventListener('click', function() {
@@ -92,6 +117,8 @@ btnGuardar.addEventListener('click', function() {
       }else{
             paciente.discapacidad = 0;
       }
+
+      // paciente2.
 
       console.log(paciente);
       crearPaciente(paciente);

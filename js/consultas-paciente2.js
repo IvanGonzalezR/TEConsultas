@@ -10,12 +10,15 @@ let inputCelular = document.getElementById('celular2');
 let inputCorreo = document.getElementById('correo2');
 let inputDireccion = document.getElementById('direccion2');
 let inputFechaNacimiento = document.getElementById('fechaNac2');
+let inputSexo = document.getElementById('sexo2');
+let inputSexo2 = document.getElementById('sexo22');
+let inputDiscapacidad = document.getElementById('discapacidad2');
+let inputDiscapacidad2 = document.getElementById('discapacidad22');
 
 let iconAccount = document.getElementById('iconAccount');
 let iconCalendario = document.getElementById('iconCalendario');
 let container_cons_rec = document.querySelector('.container_cons_rec');
 let confCuenta = document.getElementById('configuracion_cuenta');
-// let inputSexo = document.getElementById('sexo');
 let inputTipoSangre = document.getElementById('tipoSangre2');
 let inputFoto = document.getElementById('foto2');
 let inputFoto2 = document.getElementById('fotoPerfil');
@@ -67,10 +70,23 @@ function actualizarPacientes(datosUsuarioNombre){
 }
 
 function actualizarPacientes2(datosUsuario){
-   console.log(datosUsuario);
+   // console.log(datosUsuario);
          inputCelular.value = datosUsuario.data[0].celular;
          inputDireccion.value = datosUsuario.data[0].direccion;
-         // inputFechaNacimiento.value = datosUsuario[0].data.fechaNac;
+         inputFechaNacimiento.value = datosUsuario.data[0].fechaNac;
+
+         if(datosUsuario.data[0].sexo == 1){
+            inputSexo.checked = true;
+         }else{
+            inputSexo2.checked = true;
+         }
+
+         if(datosUsuario.data[0].discapacidad == 0){
+            inputDiscapacidad.checked = true;
+         }else{
+            inputDiscapacidad2.checked = true;
+         }
+
          inputTipoSangre.value = datosUsuario.data[0].tipoSangre;
          inputFoto2.src = "/recursos/pruebas/pacientes/" + datosUsuario.data[0].foto;
          datosUsuario.data[0].direccion;

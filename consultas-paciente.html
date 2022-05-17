@@ -43,8 +43,8 @@
                 <div class="menu-container-main flex">
                     <div class="info-paciente flex">
                         <img src="/recursos/img/imgPaciente.jpg" alt="pp-paciente">
-                        <p>Jesús López</p>
-                        <p id="correo">jesuslopez19@gmail.com</p>
+                        <p id="nombreLeft">Jesús López</p>
+                        <p id="correoLeft">jesuslopez19@gmail.com</p>
                     </div>
                     <div class="items flex">
                         <a id="iconAccount">
@@ -125,13 +125,13 @@
                             </div>
 
                             <div class="inputs flex column centerX">
-                                <input type="text" value="Jesús López" readonly="true" />
+                                <input type="text" value="Jesús López" readonly="true" id="nombre"/>
                                 <input type="tel" placeholder="8712397966" id="celular" />
                                 <input type="text" name="correo" id="correo" value="jesuslopez19@gmail.com" readonly="true"/>
                                 <input type="text" name="direccion" id="direccion" placeholder="Col. Centro #345,  Gomez Palacio"/>
                                 <input type="date" name="nacimiento" id="fechaNac" value="1995-01-01">
-                                <p id="idSexo">Sexo: M <input type="radio" name="sexo" id="sexo1" value="M" checked> F <input type="radio" name="sexo" id="sexo2" value="F"></p>
-                                <p id="idSexo">Discapacidad: Si <input type="radio" name="discapacidad" id="discapacidad" value="Si"> No <input type="radio" name="discapacidad" id="discapacidad" value="No" checked></p>
+                                <p id="idSexo">Sexo: M <input type="radio" name="sexo" id="sexo1" value="M" checked disabled> F <input type="radio" name="sexo" id="sexo2" value="F" disabled></p>
+                                <p id="idSexo">Discapacidad: Si <input type="radio" name="discapacidad" id="discapacidad1" value="Si" disabled> No <input type="radio" name="discapacidad" id="discapacidad2" value="No" checked disabled></p>
                                 <input type="text" name="tipo_sangre" id="tipoSangre" placeholder="B+" />
                                 <input type="file" name="foto" id="foto" />
                             </div>

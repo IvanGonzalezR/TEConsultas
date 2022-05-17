@@ -1,6 +1,6 @@
 //Botones
-let btnAgendar = document.getElementById('btn-agendar-cita');
-btnAgendar.addEventListener('click', agendarCita);
+// let btnAgendar = document.getElementById('btn-agendar-cita');
+// btnAgendar.addEventListener('click', agendarCita);
 
 //Obtener ID del usuario en sesion activa
 let idUsuario = localStorage.getItem("id");
@@ -8,7 +8,7 @@ console.log(idUsuario);
 
 //Variables Globales
 const headers = {"Content-Type": "application/json",};
-let idDoctor = 12;
+let idDoctor;
 let derechaFoto = document.getElementById('derechaFoto');
 let derechaNombre = document.getElementById('derechaNombre');
 let derechaEspecialidad = document.getElementById('derechaEspecialidad');
@@ -18,9 +18,10 @@ let derechaFecha = document.getElementById('derechaFecha').value;
 let derechaHorarios = document.getElementById('derechaHorarios');
 var todosDoctores = [];
 var todosinfoDoctores = {};
+let precioConsulta = 0;
 
 // let derechaHora = document.getElementById('HoraActual');
-let derechaHora = "12";
+let derechaHora;
 let consulta = {};
 let horarioInicial = [];
 let horarioFinal = [];
@@ -34,22 +35,6 @@ consulta.link = "www.facebook.com";
 
 console.log("consulta");
 console.log(consulta);
-
-function agendarCita(){
-      console.log("funciona");
-      axios.post("http://localhost:3005/api/consultas", consulta, headers)
-      .then(response => {
-            datosConsulta = response;
-            console.log("Datos de la consulta >");
-            console.log(datosConsulta);
-      //    actualizarPacientes(datosUsuarioNombre); 
-
-      })
-      .catch(error => {console.error(error)
-      if (error.response.status === 401){
-            // alert("El correo ya esta registrado");
-      }});
-}
 
 function getAllDoctores(){
    const headers2 = {"Content-Type": "application/json",};
@@ -91,7 +76,7 @@ function getAllInfoDoctores(){
             div.innerHTML = div.innerHTML + ['<div class="info-carta-doctor flex">' +
             '<p>' + todosDoctores[0]['data']['data'][i].nombre + '</p>' + 
             '<p>' + element.especialidad + '</p>' + 
-            '<p>Precio consulta: <span>$' + element.precioCons + '.00<span></p>' + 
+            '<p>Precio consulta: <span> $' + element.precioCons + '.00<span></p>' + 
             '<button class="btn-ver-mas" id="' + element.idDoctor +'">Ver más</button>' +
             '</div>'];
 
@@ -121,7 +106,7 @@ function generarDatos(){
                         btnHorarios[j].classList.add('none');
                   }
 
-                  let idDoctor = btnVerMas[i].id;
+                  idDoctor = btnVerMas[i].id;
                   console.log(idDoctor);
 
                   derechaFoto.src = "/recursos/pruebas/doctores/perfil/" + todosinfoDoctores.data[i].foto;
@@ -140,18 +125,20 @@ function generarDatos(){
 
                   for (let h = horarioInicial; h <= horarioFinal; h++) {
                         //Crear nuevos botones
-                        
                         let button = document.createElement('button');
                         button.classList.add('btn-horarios-citas'); 
                         button.textContent = h + ":00";
+                        button.addEventListener('click', function(){
+                              derechaHora = h + ":00";
+                              console.log(derechaHora);
+                              button.selected = true;
+                              precioConsulta = todosinfoDoctores.data[i].precioCons;
+                        });
                         document.getElementById("derechaHorarios").insertBefore(button, null); 
                   }
-
                   console.log("Horario inicial: " + horarioInicial);
                   console.log("Horario Final: " + horarioFinal);
-
                   //delete buttons
-                  
             });
       }
       

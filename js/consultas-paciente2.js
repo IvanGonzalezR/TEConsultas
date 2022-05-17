@@ -1,5 +1,6 @@
 //Globales de Axios
 axios.defaults.withCredentials = true;
+const headers = {"Content-Type": "application/json",};
 
 //Obtener ID del usuario en sesion activa
 let idUsuario = localStorage.getItem("id");
@@ -14,6 +15,8 @@ let inputSexo = document.getElementById('sexo2');
 let inputSexo2 = document.getElementById('sexo22');
 let inputDiscapacidad = document.getElementById('discapacidad2');
 let inputDiscapacidad2 = document.getElementById('discapacidad22');
+let inputCorreoIzq = document.getElementById('correoIzq');
+let inputNombreIzq  = document.getElementById('nombreIzq');
 
 let iconAccount = document.getElementById('iconAccount');
 let iconCalendario = document.getElementById('iconCalendario');
@@ -25,8 +28,13 @@ let inputFoto2 = document.getElementById('fotoPerfil');
 
 let usuario = {idPaciente: idUsuario};
 console.log(usuario);
-let datosUsuario = {};
+
+let doctor = {idPaciente: idUsuario};
+console.log(usuario);
+let datosUsuario = [];
+let datosDoctores = {};
 let datosUsuarioNombre = {};
+foto2Valor = "";
 
 //Obtener objeto a partir de la ID del usuario
 function getInfoPacientes(){
@@ -67,6 +75,8 @@ getPacientes();
 function actualizarPacientes(datosUsuarioNombre){
          inputNombre.value = datosUsuarioNombre.data.nombre;
          inputCorreo.value = datosUsuarioNombre.data.correo;
+         inputCorreoIzq.textContent = datosUsuarioNombre.data.correo;
+         inputNombreIzq.textContent = datosUsuarioNombre.data.nombre;
 }
 
 function actualizarPacientes2(datosUsuario){
@@ -91,6 +101,98 @@ function actualizarPacientes2(datosUsuario){
          inputFoto2.src = "/recursos/pruebas/pacientes/" + datosUsuario.data[0].foto;
          datosUsuario.data[0].direccion;
 }
+
+objUsuario = {idPaciente: idUsuario};      
+
+function getAllConsultas(){
+   const headers2 = {"Content-Type": "application/json",};
+   axios.post("http://localhost:3005/api/consultas/getAllConsultas", objUsuario, headers2)
+      .then(response => {
+         todasConsultas = response.data;
+         console.log("datos All InfoConsultas >");
+         console.log(todasConsultas[0].idDoctor);
+         console.log(todasConsultas);
+
+         
+         for(let i = 0; i < todasConsultas.length; i++){
+         const headers2 = {"Content-Type": "application/json",};
+         axios.post("http://localhost:3005/api/infoDoctores/getPorPaciente", todasConsultas[i], headers2)
+            .then(response => {
+               datosDoctores = response;
+               console.log("Doctor > " );
+               console.log(datosDoctores);
+
+               todasConsultas.forEach(element => {
+           // console.log(element.fecha);
+            let div = document.createElement('div');
+            div.classList.add('carta_consulta');
+            div.classList.add('flex');
+            div.innerHTML = ['<img src="/recursos/pruebas/doctores/perfil/' 
+            + datosDoctores.data[i].foto + '"' + 'alt="doctor">'];
+            div.innerHTML = div.innerHTML + ['<div class="info-carta-consulta flex">' +
+            '<p>' + datosDoctores.data[i].nombreC + '</p>' + 
+            '<p>Fecha: <span> ' + element.fecha + '<span></p>' + 
+            '<button class="btn-ir-cons"><meta http-equiv="Refresh" content="5;url=https://www.facebook.com"><a  id="' + element.idDoctor +'">Ir a consulta</a></button>' +
+            '</div>'];
+            // div.addEventListener('click', function(){
+            //    window.location.repleace = "";
+            // });
+
+            // i++;
+            document.getElementById("consultasCards").insertBefore(div, null);  
+
+            // generarDatos();
+         });
+
+               // actualizarPacientes2(datosUsuario);
+            })
+            .catch(error => {console.error(error)
+            if (error.response.status === 401){
+               // alert("El correo ya esta registrado");
+            }});
+         }
+         
+         // obtenerDoctorPorPaciente();
+
+         // <div class="carta_consulta flex">
+         //                            <img src="/recursos/img/image 3.png" alt="doctor">
+         //                            <div class="info-carta-consulta flex">
+         //                                <p>Juan Manuel Alfaro Aguilera</p>
+         //                                <p>Fecha: <span>1/May/2022</span></p>
+         //                                <button class="btn-ir-cons" >Ir consulta</button>
+         //                            </div>
+         //                        </div>
+
+         //Crear los cards Dinamicamente
+         let i = 0
+         todasConsultas.forEach(element => {
+           // console.log(element.fecha);
+            let div = document.createElement('div');
+            div.classList.add('carta_consulta');
+            div.classList.add('flex');
+            div.innerHTML = ['<img src="/recursos/img/' 
+            + foto2Valor + '"' + 'alt="doctor">'];
+            div.innerHTML = div.innerHTML + ['<div class="info-carta-consulta flex">' +
+            '<p>' + datosDoctores.data[0].nombreC + '</p>' + 
+            '<p>' + element.especialidad + '</p>' + 
+            '<p>Precio consulta: <span> $' + element.precioCons + '.00<span></p>' + 
+            '<button class="btn-ver-mas" id="' + element.idDoctor +'">Ver más</button>' +
+            '</div>'];
+
+            i++;
+            document.getElementById("consultasCards").insertBefore(div, null);  
+
+            // generarDatos();
+         });
+
+      })
+      .catch(error => {console.error(error)
+      if (error.response.status === 401){
+         // alert("El correo ya esta registrado");
+      }});
+}
+getAllConsultas();
+
 
 //Cerrar sesion
 cerrarSesion = document.getElementById('cerrarSesion');

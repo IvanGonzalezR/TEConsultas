@@ -47,12 +47,12 @@
             <div class="info-doctores">
                 <p>INFORMACIÓN</p>
                 <div class="info-completa flex">
-                    <img src="/recursos/img/image 3.png" alt="doctor" id="derechaFoto">
-                    <p class="titulo" id="derechaNombre">Juan Manuel Alfaro Aguilera</p>
-                    <p id="derechaEspecialidad">Ginecologo</p>
-                    <p id="derechaDescripcion">Descripcion: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dicta inventore labore adipisci nihil laudantium similique ipsa asperiores quasi minima.</p>
+                    <img src="./recursos/img/image 3.png" alt="doctor" id="derechaFoto">
+                    <p class="titulo" id="derechaNombre">Don Beto</p>
+                    <p id="derechaEspecialidad">Cardiologo intervencionista</p>
+                    <p id="derechaDescripcion"></p>
                     <div class="ag-cita">
-                        <p class="titulo">Agendar cita</p>
+                        <p class="titulo"></p>
                         <p>Precio consulta: <span id="derechaPrecio">$150.00</span></p>
                         <p>Fecha: <input type="date" class="form-control form-control-sm" id="derechaFecha" value="2022-05-17"></p>
                         <p>Horario:</p>
@@ -65,7 +65,7 @@
                             <button class="btn-horarios-citas" >16:00</button>
                             <button class="btn-horarios-citas" >16:00</button>
                         </div>
-                        <button class="btn-agendar-cita" id="btn-agendar-cita">Agendar cita</button>
+                        <div class="flex" id="paypal-button-container"></div>
                     </div>
                 </div>
             </div>
@@ -78,11 +78,145 @@
     </div>
 
     <script>
-        var fecha = new Date();
-        document.getElementById("derechaFecha").value = fecha.toJSON().slice(0,10);
+        let fechaValor = "";
+        let fecha = document.getElementById("derechaFecha");
+        fecha.addEventListener('change', function(){
+            fechaValor = fecha.value;
+        });
     </script>
 
+<style>
+        #paypal-button-container{
+            width: 100%;
+            margin-top: 1.3rem;
+            padding: 0 1rem;
+            height: 10rem;
+            text-align: center;
+            justify-content: center;
+        }
+    </style>
+    <!-- <script>
+        let costoConsulta;
 
+        const headers2 = {"Content-Type": "application/json",};
+        axios.post("http://localhost:3005/api/infoDoctores/todosInfoDoctores", {}, headers2)
+        .then(response => {
+         todosinfoDoctores = response.data;
+            axios.post("http://localhost:3005/api/infoDoctores/get", {idDoctor: todosinfoDoctores.data.idDoctor}, headers2)
+            .then(response => {
+            todosinfoDoctores = response.data;
+      })
+      .catch(error => {console.error(error)
+      if (error.response.status === 401){
+         // alert("El correo ya esta registrado");
+      }});
+         
+
+      })
+      .catch(error => {console.error(error)
+      if (error.response.status === 401){
+         // alert("El correo ya esta registrado");
+      }});
+
+    </script> -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AcuQrLYCalxozsBUUCn6EzL5EMvb08wrLHF9jTMoS9AE-eWY9QpCrnQvhNzXhnEC0rlx7VtV9wtSY2hJ&currency=MXN"></script>
+    <!-- <div id="paypal-button-container"></div> -->
+    <script>
+
+        
+
+      paypal.Buttons({
+          style:{
+              color: 'blue',
+              shape: 'pill',
+              label: 'pay'
+          },
+        createOrder: (data, actions) => {
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: precioConsulta
+              }
+            }]
+          });
+        },
+        onCancel: function(data){
+            alert("Pago cancelado");
+        },
+        onApprove: (data, actions) => {
+          return actions.order.capture().then(function(orderData) {
+
+        //     function obtenerDoctor(){
+        //     const headers = {"Content-Type": "application/json",};
+        //     axios.post('http://localhost:3005/api/infodoctores/get', doctor2, {headers})
+        //         .then(response => {
+        //             localStorage.removeItem("primeraVez");
+        //             localStorage.setItem("primeraVez", "false");
+        //             console.log("Doctor > ")
+        //             console.log(response)
+
+        //             foto2Valor = response.data[0].foto;
+        //             foto2.src = "/recursos/pruebas/doctores/perfil/" + foto2Valor;
+        //             actualizarDoctor(response.data);
+        //         })
+        //         .catch(error => {console.error(error)
+        //         if (error.response.status === 401){
+        //             // alert("El correo ya esta registrado");
+        //         }});
+        // }
+        // obtenerDoctor();
+
+            consulta.idDoctor = idDoctor;
+            consulta.idPaciente = idUsuario;
+            consulta.fecha = fechaValor;
+            consulta.hora = ""+derechaHora; //obtener los horarios disponibles
+            consulta.link = "www.facebook.com";
+
+            let pago = {};
+            pago.idDoctor = idDoctor;
+            pago.idPaciente = idUsuario;
+            pago.fecha = fechaValor;
+            pago.monto = precioConsulta;
+            
+            //Registrar la consulta
+            axios.post("http://localhost:3005/api/consultas", consulta, headers)
+            .then(response => {
+                    datosConsulta = response;
+                    console.log("Datos de la consulta >");
+                    console.log(datosConsulta);
+
+                    // alert("Gracias por tu compra " + "!");
+                    // setTimeout( function() { window.location.href = "/consultas-paciente2.html"; }, 1000 );
+
+            })
+            .catch(error => {console.error(error)
+            if (error.response.status === 401){
+                    // alert("El correo ya esta registrado");
+            }});
+
+            //Registrar Pago
+            axios.post("http://localhost:3005/api/pagos", pago, headers)
+            .then(response => {
+                    datosPago = response;
+                    console.log("Datos del pago >");
+                    console.log(datosPago);
+
+                    alert("Gracias por tu compra " + "!");
+                    setTimeout( function() { window.location.href = "/consultas-paciente2.html"; }, 1000 );
+
+            })
+            .catch(error => {console.error(error)
+            if (error.response.status === 401){
+                    // alert("El correo ya esta registrado");
+            }});
+
+            
+          });
+        }
+      }).render('#paypal-button-container');
+    </script>
     
 </body>
+
+
 </html>

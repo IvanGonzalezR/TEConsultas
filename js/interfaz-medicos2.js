@@ -1,20 +1,64 @@
+import { getAllConsultasMedicosAxios } from "./axios/consultasAxios.js";
+import { getPaciente } from "./axios/pacientesAxios.js";
+import { crearReceta } from "./axios/recetasAxios.js";
+
 //Globales de Axios
 axios.defaults.withCredentials = true;
 
 //Obtener ID del usuario en sesion activa
 let idDoctor = localStorage.getItem("id");
 console.log(idDoctor);
+let doctor3 = {idDoctor: idDoctor};
 
-let calendario = document.querySelector('.calendario');
-let infoAccount = document.querySelector('.info-account');
-let receta = document.querySelector('.receta');
-
-//Botones
+//Referencias a los botones
 let iconAccount = document.getElementById('iconAccount');
 let iconCalendario = document.getElementById('iconCalendario');
 let iconReceta = document.getElementById('iconReceta');
 let btnGuardar = document.getElementById('btnGuardar2');
+let btnEnviarReceta = document.getElementById('btnEnviarReceta');
+let selectNombre = document.getElementById('selectNombre');
 let doctor = {};
+
+//Contiene los nombres individuales de los pacientes para cada doctor
+let nombresPacientesUnicos = [];
+//Contiene los id individuales de los pacientes para cada doctor
+let idPacientesUnicos = [];
+
+//
+selectNombre.addEventListener('change', function(){
+  console.log(selectNombre.value);
+});
+
+//Obtiene todas las consultas que tiene el medico en cuestion
+getAllConsultasMedicosAxios(doctor3).then(function(response){
+    console.log("getAllConsultasMedicosAxios");
+    console.log(response);
+
+    response.forEach( e => {
+      let idPaciente = {idPaciente: e.idPaciente};
+      // Obtenemos el nombre del paciente para cada consulta retornada
+      getPaciente(idPaciente).then(function(response2){
+        // Si no existe en el arreglo, lo indexamos
+        if (nombresPacientesUnicos.indexOf(response2.data.nombre) == -1){
+          nombresPacientesUnicos.push(response2.data.nombre);
+          idPacientesUnicos.push(e.idPaciente);
+
+          // Agregamos el nombre del paciente al select
+          let option = document.createElement("option");
+          option.text = response2.data.nombre;
+          option.value = e.idPaciente;
+          selectNombre.add(option);
+
+      }});
+    });
+
+    console.log(nombresPacientesUnicos);
+    console.log(idPacientesUnicos);
+});
+
+let calendario = document.querySelector('.calendario');
+let infoAccount = document.querySelector('.info-account');
+let receta = document.querySelector('.receta');
 
 //Foto superior
 let foto2 = document.getElementById('foto2');
@@ -24,33 +68,6 @@ let doctor2 = {idDoctor: idDoctor};
 console.log(doctor2);
 let datosDoctor = {};
 let datosDoctorNombre = {};
-
-//Boton Cuentaa
-iconAccount.addEventListener('click', function(event){
-    event.preventDefault();
-
-    infoAccount.classList.remove('none');
-    calendario.classList.add('none');
-    receta.classList.add('none');
-});
-
-//Boton Calendario
-iconCalendario.addEventListener('click', function(event){
-    event.preventDefault();
-
-    infoAccount.classList.add('none');
-    calendario.classList.remove('none');
-    receta.classList.add('none');
-});
-
-//Boton Receta
-iconReceta.addEventListener('click', function(event){
-    event.preventDefault();
-
-    infoAccount.classList.add('none');
-    calendario.classList.add('none');
-    receta.classList.remove('none');
-});
 
 btnGuardar.addEventListener('click', function(event){
     event.preventDefault();
@@ -79,20 +96,25 @@ btnGuardar.addEventListener('click', function(event){
     crearDoctor(doctor);
 });
 
-// function crearDoctor(doctor){
-//     const headers = {"Content-Type": "application/json",};
-//     axios.post('http://localhost:3005/api/infodoctores', doctor, {headers})
-//         .then(response => {
-//             alert("Informacion completa del doctor");
-//             localStorage.removeItem("primeraVez");
-//             localStorage.setItem("primeraVez", "false");
-//             setTimeout( function() { window.location.href = "/interfaz-medicos2.html"; }, 1000 );
-//         })
-//         .catch(error => {console.error(error)
-//         if (error.response.status === 401){
-//             // alert("El correo ya esta registrado");
-//         }});
-// }
+//OBtener los datos de la receta y crearla
+btnEnviarReceta.addEventListener('click', function(event){
+    event.preventDefault();
+    let receta = {};
+    receta.idDoctor = idDoctor;
+    receta.idPaciente = selectNombre.value;
+    receta.prescripcion = document.getElementById('descripcionReceta').value;
+    receta.fecha = document.getElementById('fechaReceta').value;
+    let edad = document.getElementById('edadReceta').value;
+    let peso = document.getElementById('pesoReceta').value;
+    let altura = document.getElementById('alturaReceta').value;
+    let alergias = document.getElementById('alergiasReceta').value;
+    receta.datos = edad + " " + peso + " " + altura + " " + alergias;
+    // console.log(receta.datos.split(" ")[0]);
+
+    crearReceta(receta).then(function(response){
+      setTimeout( function() { window.location.href = "./interfaz-medicos2.html"; }, 1000 );
+    });
+});
 
 function obtenerDoctor(){
     const headers = {"Content-Type": "application/json",};
@@ -200,7 +222,7 @@ function manejarImagenes(evt) {
   }
 
   //Cerrar sesion
-cerrarSesion = document.getElementById('cerrarSesion');
+let cerrarSesion = document.getElementById('cerrarSesion');
 cerrarSesion.addEventListener('click', function() {
    localStorage.removeItem("id");
    localStorage.removeItem("primeraVez");
@@ -216,3 +238,29 @@ cerrarSesion.addEventListener('click', function() {
   let imgPerfil = document.getElementById('imgPerfil2');
   imgPerfil.addEventListener('change', manejarImagenes);
 
+  //Boton Cuentaa
+iconAccount.addEventListener('click', function(event){
+    event.preventDefault();
+
+    infoAccount.classList.remove('none');
+    calendario.classList.add('none');
+    receta.classList.add('none');
+});
+
+//Boton Calendario
+iconCalendario.addEventListener('click', function(event){
+    event.preventDefault();
+
+    infoAccount.classList.add('none');
+    calendario.classList.remove('none');
+    receta.classList.add('none');
+});
+
+//Boton Receta
+iconReceta.addEventListener('click', function(event){
+    event.preventDefault();
+
+    infoAccount.classList.add('none');
+    calendario.classList.add('none');
+    receta.classList.remove('none');
+});

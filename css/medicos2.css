@@ -229,6 +229,7 @@ input[class="dia-semana"]{
     border-radius: .3rem;
     padding: 15px 0 15px 0;
     width: 415px;
+    color: white;
 }
 
 .btnUser a {
@@ -254,6 +255,10 @@ input[class="dia-semana"]{
 
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+#descripcionReceta{
+    width: 100%;
 }
 
 /*-------------- SCROLL --------------*/

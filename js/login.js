@@ -49,7 +49,7 @@ function iniciarSesionDoctor(usuario){
             if(localStorage.getItem("primeraVez") == "true"){
                 setTimeout( function() { window.location.href = "./interfaz-medicos.html"; }, 1000 );
             }else{
-            setTimeout( function() { window.location.href = "./interfaz-medicos2.html"; }, 1000 );
+                setTimeout( function() { window.location.href = "./interfaz-medicos2.html"; }, 1000 );
             }
         })
         .catch(error => {console.error(error)

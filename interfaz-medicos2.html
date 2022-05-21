@@ -165,18 +165,24 @@
 
                         <div class="bodyR">
                             <div class="infoGeneral flex">
-                                <p>Nombre: <input type="text" name="nombre" id="nombre" placeholder=""></p>
-                                <p>Edad: <input type="number" name="edad" id="edad"> años</p>
-                                <p>Fecha: <input type="date" name="fecha" id="fecha"></p>
+                                <p>Nombre:  <select name="nombre" id="selectNombre" >
+                                    <option value="0">Seleccione paciente...</option>
+                                </select></p>
+                                <p>Edad: <input type="number" name="edad" id="edadReceta"> años</p>
+                                <p>Fecha: <input type="date" name="fecha" id="fechaReceta"></p>
                             </div>
-                            <p>Peso: <input type="text" name="peso" id="peso"> kgs</p>
-                            <p>Altura: <input type="number" name="altura" id="altura"> metros</p>
-                            <p>Alergias: <input type="text" name="alergias" id="alergias"></p>
-                            <textarea name="prescripcion" id="prescripcion" cols="30" rows="10"></textarea>
+                            <p>Peso: <input type="text" name="peso" id="pesoReceta"> kgs</p>
+                            <p>Altura: <input type="number" name="altura" id="alturaReceta"> metros</p>
+                            <p>Alergias: <input type="text" name="alergias" id="alergiasReceta"></p>
+                            <textarea  name="prescripcion" id="descripcionReceta" placeholder="Prescripcion..."
+                            cols="70" rows="10"></textarea>
+
                         </div>
 
                         <div class="footerR flex">
                             <img src="/recursos/img/logoEsmpresa.png" alt="LOGO EMPRESA">
+                            <button type="submit" class="btnUser flex" 
+                            name="button" id="btnEnviarReceta"><a href="">Enviar receta</a></button>
                             <div class="firmaImagen">
                                 <img src="/recursos/img/firmaMedico.png" alt="firma" class="firmaImagen">
                                 <p>Firma</p>
@@ -198,7 +204,7 @@
     
     <script src="./js/calendar.js"></script>
     <!-- <script src="./js/interfaz-medicos.js"></script> -->
-    <script src="./js/interfaz-medicos2.js"></script>
+    <script type="module" src="./js/interfaz-medicos2.js"></script>
     <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
 </body>
 </html>

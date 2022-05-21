@@ -127,6 +127,14 @@ function obtenerDoctor(){
 
             foto2Valor = response.data[0].foto;
             foto2.src = "/recursos/pruebas/doctores/perfil/" + foto2Valor;
+
+            let firma = document.getElementById("recetaFirma");
+            firma.src = "/recursos/pruebas/doctores/firma/" + response.data[0].firma;
+            let nombre = document.getElementById("recetaNombreDoctor");
+            nombre.textContent = response.data[0].nombreC;
+            let especialidad = document.getElementById("recetaEspecialidadDoctor");
+            especialidad.textContent = response.data[0].especialidad;
+
             actualizarDoctor(response.data);
         })
         .catch(error => {console.error(error)

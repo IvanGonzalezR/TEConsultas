@@ -237,6 +237,8 @@ btnVer.addEventListener('click', function(){
       getPaciente(usuario).then(response => {
          let nombre = document.getElementById("recetaNombre");
          nombre.textContent = response.data.nombre;
+         let cedula = document.getElementById("recetaCedulaDoctor");
+         cedula.textContent = response[0].cedula;
       });
 
       let idDoctor = {idDoctor: receta[0].idDoctor};
@@ -249,6 +251,11 @@ btnVer.addEventListener('click', function(){
 
          let firma = document.getElementById("recetaFirma");
          firma.src = "/recursos/pruebas/doctores/firma/" + response[0].firma;
+         let nombre = document.getElementById("recetaNombreDoctor");
+         nombre.textContent = response[0].nombreC;
+         let especialidad = document.getElementById("recetaEspecialidadDoctor");
+         especialidad.textContent = response[0].especialidad;
+         
       });
 
       

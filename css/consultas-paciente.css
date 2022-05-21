@@ -100,6 +100,92 @@
     height: 100%;
 }
 
+/* -------------------- CONTAINER RECETA -------------------- */
+.receta{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    border-radius: 1rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.headerR{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.headerR > img{
+    width: 350px;
+}
+
+.separacion{
+    width: 100%;
+    height: 5px;
+    margin: 20px 0 20px 0;
+    background-color: #030419;
+}
+
+.bodyR{
+    width: 100%;
+}
+
+.bodyR p{
+    margin-bottom: 15px;
+}
+
+.infoGeneral{
+    justify-content: space-between;
+}
+
+#prescripcion{
+    width: 100%;
+    /* height: 100%; */
+}
+
+.footerR{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerR > img{
+    width: 300px;
+}
+
+.imgFirma{
+    width: 100px;
+    height: 100px;
+    background-color: #030419;
+    
+}
+
+.btnUser {
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    background-color: #030419;
+    letter-spacing: .1rem;
+    border-radius: .3rem;
+    padding: 15px 0 15px 0;
+    width: 30%;
+    color: white;
+}
+
+.btnUser a {
+    color: white;
+    font-size: 18px;
+}
+
+.btnUser:hover {
+    background-color: #495057;
+    cursor: pointer;
+}
 /* --------------- CONTAINER CONSULTAS / RECETAS ------------------- */
 .container_cons_rec{
     width: 100%;

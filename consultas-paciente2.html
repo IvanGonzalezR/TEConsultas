@@ -40,8 +40,8 @@
         </div>
 
         <main>
-            <div class="container-main flex">
-                <div class="menu-container-main flex">
+            <div class="container-main flex" >
+                <div class="menu-container-main flex" id="contIzq">
                     <div class="info-paciente flex">
                         <img src="/recursos/img/image 3.png" alt="pp-paciente" id="fotoPerfil">
                         <p id="nombreIzq">Jesús López</p>
@@ -86,14 +86,53 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- En caso de seleccionar recetas -->
+                    <div class="receta flex none">
+                        <div class="headerR flex">
+                            <img src="/recursos/img/logo_negro.png" alt="LOGO">
+                            <div class="infoHeader">
+                                <p>Juan Manuel Alfaro Aguilera</p>
+                                <p>Ginecologo</p>
+                                <p>123456</p>
+                            </div>
+                        </div>
+
+                        <div class="separacion"><p>ㅤ</p></div>
+
+                        <div class="bodyR">
+                            <div class="infoGeneral flex">
+                                <p>Nombre:<p id="recetaNombre"></p></p>
+                                <p>Edad: <p id="recetaEdad"></p> años</p>
+                                <p>Fecha: <p id="recetaFecha"></p></p>
+                            </div>
+                            <p>Peso: <span id="recetaPeso"></span> kgs</p>
+                            <p>Altura: <span id="recetaAltura"></span> metros</p>
+                            <p>Alergias: <span id="recetaAlergia"></span></p>
+                            <textarea disabled name="prescripcion" id="recetaPrescripcion" placeholder="Prescripcion..."
+                            cols="70" rows="10"></textarea>
+
+                        </div>
+
+                        <div class="footerR flex">
+                            <img src="/recursos/img/logoEsmpresa.png" alt="LOGO EMPRESA">
+                            <button type="submit" class="btnUser flex" 
+                            name="button" id="btnImprimir"><a href="">Imprimir receta</a></button>
+                            <div class="firmaImagen">
+                                <img src="/recursos/img/firmaMedico.png" alt="firma" class="firmaImagen" id="recetaFirma">
+                                <p>Firma</p>
+                            </div>
+                        </div>
+                    </div>
     
-                        <div class="container_recetas">
+                        <div class="container_recetas" id="containerRecetas">
                             <p>RECETAS</p>
                             <div class="recetas">
                                 <div class="carta_receta flex">
                                     <img src="/recursos/img/receta_imagen.png" alt="receta_imagen">
                                     <div class="info-carta-receta flex">
                                         <p>Receta del doctor: </p>
+                                        <p>Lamia Hamdan</p>
                                         <button class="btn-ir-rec" id="btnVer">Ver</button>
                                     </div>
                                 </div>

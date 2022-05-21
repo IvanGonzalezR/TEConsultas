@@ -245,7 +245,7 @@ input[class="dia-semana"]{
 /* -------------------- CONTAINER RECETA -------------------- */
 .receta{
     width: 100%;
-    height: auto;
+    height: 80%;
     background-color: white;
     border-radius: 1rem;
     flex-direction: column;
@@ -258,8 +258,10 @@ input[class="dia-semana"]{
 }
 
 #descripcionReceta{
-    width: 100%;
+    width: 100% !important;
+    /* height: 10px; */
 }
+
 
 /*-------------- SCROLL --------------*/
 

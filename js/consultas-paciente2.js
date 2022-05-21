@@ -1,6 +1,8 @@
 import { getAllConsultasAxios } from "./axios/consultasAxios.js";
 import { getInfoPaciente } from "./axios/infoPacientesAxios.js";
+import { getInfoDoctores } from "./axios/infoDoctoresAxios.js";
 import { getPaciente } from "./axios/pacientesAxios.js";
+import { getReceta } from "./axios/recetasAxios.js";
 
 //Globales de Axios
 // axios.defaults.withCredentials = true;
@@ -25,11 +27,13 @@ let inputNombreIzq  = document.getElementById('nombreIzq');
 let iconAccount = document.getElementById('iconAccount');
 let iconCalendario = document.getElementById('iconCalendario');
 let container_cons_rec = document.querySelector('.container_cons_rec');
+let container_consultas = document.querySelector('.container_consultas');
 let confCuenta = document.getElementById('configuracion_cuenta');
 let inputTipoSangre = document.getElementById('tipoSangre2');
 let inputFoto = document.getElementById('foto2');
 let inputFoto2 = document.getElementById('fotoPerfil');
 let btnVer = document.getElementById('btnVer');
+let btnImprimir = document.getElementById('btnImprimir');
 
 let usuario = {idPaciente: idUsuario};
 
@@ -37,7 +41,7 @@ let doctor = {idPaciente: idUsuario};
 console.log(usuario);
 let datosUsuario = [];
 let datosDoctores = {};
-let datosUsuarioNombre = {};
+let receta = document.querySelector('.receta');
 let foto2Valor = "";
 
 getPaciente(usuario).then(function(response){
@@ -84,10 +88,7 @@ function actualizarPacientes2(datosUsuario){
    // datosUsuario[0].direccion;
 }
 
-btnVer.addEventListener('click', function(){
-   // container_cons_rec.style.display = "block";
-   // confCuenta.style.display = "none";
-});
+
 
 let objUsuario = {idPaciente: idUsuario};  
 
@@ -202,4 +203,70 @@ iconCalendario.addEventListener('click', function() {
       confCuenta.classList.add('none');
       container_cons_rec.classList.remove('none');
       //confCuentaHijo.classList.add('none');
+});
+
+btnVer.addEventListener('click', function(){
+   event.preventDefault();
+
+   receta.classList.remove('none');
+   // container_cons_rec.style.display = "block";
+   container_consultas.classList.add('none');
+   confCuenta.style.display = "none";
+
+   //Obtenemos los datos de la receta
+   getReceta(usuario).then(response => {
+      console.log("RECETA RESPONSE");
+      console.log(response);
+
+      let receta = response;
+      //llenar los campos de la receta
+      
+      let edad = document.getElementById("recetaEdad");
+      edad.textContent = receta[0].datos.split(" ")[0];
+      let fecha = document.getElementById("recetaFecha");
+      fecha.textContent = receta[0].fecha;
+      let prescripcion = document.getElementById("recetaPrescripcion");
+      prescripcion.textContent = receta[0].prescripcion;
+      let peso = document.getElementById("recetaPeso");
+      peso.textContent = receta[0].datos.split(" ")[1];
+      let altura = document.getElementById("recetaAltura");
+      altura.textContent = receta[0].datos.split(" ")[2];
+      let alergias = document.getElementById("recetaAlergia");
+      alergias.textContent = receta[0].datos.split(" ")[3];
+
+      getPaciente(usuario).then(response => {
+         let nombre = document.getElementById("recetaNombre");
+         nombre.textContent = response.data.nombre;
+      });
+
+      let idDoctor = {idDoctor: receta[0].idDoctor};
+
+      getInfoDoctores(idDoctor).then(response => {
+         console.log("DOCTOR RESPONSE");
+         console.log(response);
+         let doctor = document.getElementById("recetaDoctor");
+         // doctor.src = "./recursos/pruebas/doctores/firma/" + response.foto;
+
+         let firma = document.getElementById("recetaFirma");
+         firma.src = "/recursos/pruebas/doctores/firma/" + response[0].firma;
+      });
+
+      
+
+   });
+});
+
+btnImprimir.addEventListener('click', function(){
+   event.preventDefault();
+
+   // container_cons_rec.classList.add('none');
+   let contIzq = document.getElementById("contIzq");
+   let containerRecetas = document.getElementById("containerRecetas");
+   contIzq.classList.add('none');
+   containerRecetas.classList.add('none');
+   confCuenta.classList.remove('none');
+   print();
+   contIzq.classList.remove('none');
+   containerRecetas.classList.remove('none');
+
 });
